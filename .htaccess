@@ -1,0 +1,6 @@
+Options -Indexes
+<FilesMatch "^(build|pages)\.py$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/_sources/
+RedirectMatch 404 ^/\.git

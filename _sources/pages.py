@@ -37,11 +37,11 @@ home = f'''
 <div class="vs-col vs-them"><h3>Plateforme en ligne</h3><ul>
 <li>{I["x"]}Formulaire standard, profil noté automatiquement</li><li>{I["x"]}Un conseiller différent à chaque appel</li><li>{I["x"]}Le taux est comparé, le reste est survolé</li><li>{I["x"]}Indépendants, SCI, profils atypiques souvent écartés</li></ul></div>
 <div class="vs-col vs-us"><h3>Expert KAIRN</h3><ul>
-<li>{I["check"]}Dossier construit sur mesure et argumenté pour la banque</li><li>{I["check"]}Un seul interlocuteur, de l'étude à la signature</li><li>{I["check"]}Taux, assurance, frais et garanties négociés ensemble</li><li>{I["check"]}Profils complexes bienvenus : c'est notre spécialité</li></ul></div>
+<li>{I["check"]}Dossier construit sur mesure et argumenté pour la banque</li><li>{I["check"]}Un conseiller dédié, de l'étude à la signature</li><li>{I["check"]}Taux, assurance, frais et garanties négociés ensemble</li><li>{I["check"]}Profils complexes bienvenus : c'est notre spécialité</li></ul></div>
 </div></div></section>
 
 <section class="section" id="methode"><div class="wrap">
-<div class="section-head"><span class="eyebrow">Notre méthode</span><h2>Quatre étapes, un seul interlocuteur</h2></div>
+<div class="section-head"><span class="eyebrow">Notre méthode</span><h2>Quatre étapes, un conseiller dédié</h2></div>
 <div class="steps">
 <div class="step-card"><div class="n">1</div><h3>Étude gratuite</h3><ul><li>Analyse de votre situation globale</li><li>Faisabilité et budget réel</li><li>Attestation de financement si besoin</li></ul></div>
 <div class="step-card"><div class="n">2</div><h3>Dossier solide</h3><ul><li>Espace client sécurisé</li><li>Pièces vérifiées une par une</li><li>Montage financier optimisé</li></ul></div>
@@ -82,7 +82,7 @@ def metier(fname, crumb, eyebrow, title, lead, seo, intro_h, intro_p, situations
 metier("credit-immobilier.html","Crédit immobilier","Crédit immobilier",
  "Achetez au <span class='u'>bon prix</span>, empruntez aux bonnes conditions",
  "Résidence principale, investissement locatif, prêt relais, renégociation. Nous négocions l'ensemble de votre financement, pas seulement le taux.",
- ("Crédit immobilier à Lorient · Courtier KAIRN","Courtier en crédit immobilier à Lorient et en Bretagne : résidence principale, investissement locatif, prêt relais, renégociation. Étude gratuite sous 24 h."),
+ ("Crédit immobilier à Lorient · Courtier KAIRN","Courtier en crédit immobilier à Lorient, en Bretagne et partout en France : résidence principale, investissement locatif, prêt relais, renégociation. Étude gratuite sous 24 h."),
  "De l'idée à la remise des clés",
  "<p>Avant même de visiter, nous calculons votre budget réel et vous remettons une <strong>attestation de financement</strong> qui rassure vendeurs et agences. Une fois le compromis signé, nous mettons plusieurs banques en concurrence et négocions le <strong>taux, l'assurance, les frais de dossier et les garanties</strong>.</p><p>Primo-accédant, investisseur, indépendant, achat en SCI : nous savons présenter chaque profil sous son meilleur jour.</p>",
  [("Résidence principale ou secondaire","Achat dans l'ancien, le neuf, VEFA ou construction."),("Investissement locatif","Nom propre ou SCI, LMNP, colocation, immeuble de rapport."),("Prêt relais","Acheter avant d'avoir vendu, sans tension sur votre budget."),("Renégociation et rachat de prêt","Faire baisser le coût d'un crédit en cours.")],
@@ -168,7 +168,7 @@ cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>premiè
 </div></section>
 <section class="section white" style="padding-block:40px"><div class="wrap">{stats()}</div></section>
 <section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">L'équipe</span><h2>9 experts à votre service</h2></div><div class="team">{tm}</div></div></section>
-<section class="section white" id="methode"><div class="wrap"><div class="section-head"><span class="eyebrow">Notre méthode</span><h2>Quatre étapes, un seul interlocuteur</h2></div>
+<section class="section white" id="methode"><div class="wrap"><div class="section-head"><span class="eyebrow">Notre méthode</span><h2>Quatre étapes, un conseiller dédié</h2></div>
 <div class="steps">
 <div class="step-card"><div class="n">1</div><h3>Mise en place du dossier</h3><ul><li>Ouverture de votre espace client sécurisé</li><li>Collecte des pièces justificatives</li><li>Vérification de chaque document</li></ul></div>
 <div class="step-card"><div class="n">2</div><h3>Étude du projet</h3><ul><li>Analyse complète de faisabilité</li><li>Rendez-vous avec votre courtier dédié</li><li>Optimisation du montage financier</li><li>Attestation de financement si nécessaire</li></ul></div>

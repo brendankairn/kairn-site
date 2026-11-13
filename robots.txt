@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /_sources/
+Disallow: /envoi.php
+
+Sitemap: https://kairn-finance.com/sitemap.xml

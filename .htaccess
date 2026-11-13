@@ -1,6 +1,20 @@
 Options -Indexes
-<FilesMatch "^(build|pages)\.py$">
-  Require all denied
-</FilesMatch>
+
+# www.kairn-finance.com -> kairn-finance.com (HTTPS)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.kairn-finance\.com$ [NC]
+RewriteRule ^(.*)$ https://kairn-finance.com/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^kairn-finance\.com$ [NC]
+RewriteRule ^(.*)$ https://kairn-finance.com/$1 [R=301,L]
+
+# L'adresse d'aperçu ne doit pas être indexée par Google
+SetEnvIfNoCase Host ^apercu\. KAIRN_APERCU
+Header set X-Robots-Tag "noindex, nofollow" env=KAIRN_APERCU
+
+# Fichiers internes non publics
 RedirectMatch 404 ^/_sources/
 RedirectMatch 404 ^/\.git
+RedirectMatch 404 ^/README\.md$
+
+ErrorDocument 404 /index.html

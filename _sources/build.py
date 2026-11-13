@@ -198,6 +198,7 @@ def page(fname, title, desc, body, active=None):
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}'''
     content = f'{header(active or fname)}<main>{body}</main>{footer()}{'<script>window.KAIRN_FORM_ENDPOINT="envoi.php";</script>' if MODE=='site' else ''}<script src="main.js"></script>'
     if MODE=="artifact" and fname=="index.html":
@@ -211,3 +212,12 @@ def page(fname, title, desc, body, active=None):
 exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
 for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
     shutil.copy(f, OUT)
+
+if MODE=="site":
+    import datetime
+    today=datetime.date.today().isoformat()
+    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","contact.html","mentions-legales.html"]
+    urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
+    open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+    open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")
+shutil.copy("favicon.svg", OUT)

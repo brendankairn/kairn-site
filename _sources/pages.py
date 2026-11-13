@@ -155,19 +155,19 @@ sims = page_hero("Simulateurs","Simulateurs","Faites vos calculs <span class='u'
 page("simulateurs.html","Simulateurs de crédit · KAIRN","Simulateurs gratuits : capacité d'emprunt, regroupement de crédits, économie d'assurance de prêt, prêt hypothécaire et prêt professionnel.",sims)
 
 # ---------- CABINET ----------
-team = [("Brendan Le Roux","Fondateur et dirigeant"),("Aurélie Thouvard","Coordinatrice de financement"),("Valérie Le Barber","Experte immobilier et professionnel"),("Solen Rojouant","Experte en financement"),("Laëtitia Bernard","Experte prêts hypothécaires"),("Tifenn Le Bouëdec","Experte regroupement de crédits"),("Maxime Hellec","Expert en financement"),("Laëtitia Leven","Experte immobilier et professionnel"),("Anaïs Dietrich","Experte en financement"),("Anne-Valérie Rodrigues","Experte en financement"),("Séverine Chevalier","Experte en financement")]
+team = [("Brendan Le Roux","Fondateur et dirigeant"),("Aurélie Thouvard","Coordinatrice de financement"),("Valérie Le Barber","Experte immobilier et professionnel"),("Solen Rojouant","Experte en financement"),("Laëtitia Bernard","Experte prêts hypothécaires"),("Tifenn Le Bouëdec","Experte regroupement de crédits"),("Maxime Hellec","Expert en financement"),("Laëtitia Leven","Experte immobilier et professionnel"),("Anaïs Dietrich","Experte en financement")]
 def ini(n):
-    p=n.replace("-"," ").split(); return (p[0][0]+p[-1][0]).upper() if n!="Anne-Valérie Rodrigues" else "AR"
+    p=n.replace("-"," ").split(); return (p[0][0]+p[-1][0]).upper()
 tm = "".join(f'<div class="member"><div class="avatar">{ini(n)}</div><div><b>{n}</b><span>{r}</span></div></div>' for n,r in team)
 cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>première pierre</span> de tout financement","Un cairn est un empilement de pierres qui guide le marcheur. C'est ce que nous voulons être pour vous : un repère fiable, posé pierre après pierre.") + f'''
 <section class="section"><div class="wrap split">
 <div class="prose"><span class="eyebrow">Notre histoire</span><h2 style="color:var(--text)">Un cabinet indépendant, exigeant et sur mesure</h2>
 <p>Après <strong>15 années dans le courtage</strong>, Brendan Le Roux a créé KAIRN pour bâtir le cabinet qu'il aurait voulu trouver comme client : indépendant, rigoureux, et capable de traiter les dossiers que d'autres laissent de côté.</p>
-<p>Aujourd'hui, <strong>11 experts</strong> accompagnent nos clients depuis Lorient, en Bretagne et partout en France. Chaque dossier est étudié avec précision, chaque solution choisie avec rigueur, dans un seul objectif : servir vos intérêts.</p></div>
+<p>Aujourd'hui, <strong>9 experts</strong> accompagnent nos clients depuis Lorient, en Bretagne et partout en France. Chaque dossier est étudié avec précision, chaque solution choisie avec rigueur, dans un seul objectif : servir vos intérêts.</p></div>
 <div class="panel">{ticks([("Indépendance totale","Aucune banque ne nous dicte ses produits."),("Honoraires au succès","Rien à payer avant l'obtention de votre financement."),("Un interlocuteur dédié","En agence, en visio ou par téléphone."),("Un parcours sécurisé","Espace client et signature électronique.")])}</div>
 </div></section>
 <section class="section white" style="padding-block:40px"><div class="wrap">{stats()}</div></section>
-<section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">L'équipe</span><h2>11 experts à votre service</h2></div><div class="team">{tm}</div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">L'équipe</span><h2>9 experts à votre service</h2></div><div class="team">{tm}</div></div></section>
 <section class="section white" id="methode"><div class="wrap"><div class="section-head"><span class="eyebrow">Notre méthode</span><h2>Quatre étapes, un seul interlocuteur</h2></div>
 <div class="steps">
 <div class="step-card"><div class="n">1</div><h3>Mise en place du dossier</h3><ul><li>Ouverture de votre espace client sécurisé</li><li>Collecte des pièces justificatives</li><li>Vérification de chaque document</li></ul></div>
@@ -188,7 +188,7 @@ cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>premiè
 <div class="done" hidden>{I["done"]}<h3>Candidature reçue</h3><p class="fine">Nous revenons vers vous rapidement.</p></div><div class="fail done" hidden><h3>L'envoi n'a pas abouti</h3><p class="fine">Écrivez-nous à {MAIL}.</p></div></form>
 </div></section>
 {cta_band()}'''
-page("cabinet.html","Le cabinet KAIRN · Courtiers à Lorient","KAIRN, cabinet de courtage en financement fondé par Brendan Le Roux à Lorient : 11 experts, 15 ans d'expérience, une méthode en 4 étapes. Recrutement ouvert.",cab)
+page("cabinet.html","Le cabinet KAIRN · Courtiers à Lorient","KAIRN, cabinet de courtage en financement fondé par Brendan Le Roux à Lorient : 9 experts, 15 ans d'expérience, une méthode en 4 étapes. Recrutement ouvert.",cab)
 
 # ---------- CONTACT ----------
 opts = [("immo","Crédit immobilier"),("pro","Prêt professionnel"),("rachat","Regroupement de crédits"),("hypo","Prêt hypothécaire"),("assurance","Assurance de prêt"),("seniors","Viager hypothécaire ou réméré"),("autre","Autre demande")]
@@ -210,9 +210,9 @@ contact = page_hero("Contact","Contact","Parlons de <span class='u'>votre projet
 <div class="panel">{ticks([("Par téléphone", PHONE + " · appel non surtaxé"),("Par e-mail", MAIL),("À l'agence", ADDR),("Horaires","Lundi au vendredi 9h–12h / 13h30–18h · samedi sur rendez-vous")])}</div>
 <div class="panel" style="background:var(--ink);color:#fff;border-color:var(--ink)"><span class="eyebrow" style="color:#a9c1cf">Nos engagements</span><ul class="ticks" style="margin-top:14px">
 <li>{I["clock"]}<div><b style="color:#fff">Réponse sous 24 h ouvrées</b></div></li><li>{I["gift"]}<div><b style="color:#fff">Étude de financement gratuite</b></div></li><li>{I["shield"]}<div><b style="color:#fff">Calcul gratuit de votre économie d'assurance</b></div></li><li>{I["euro"]}<div><b style="color:#fff">Honoraires uniquement en cas de succès</b></div></li></ul></div>
-<a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=41+boulevard+L%C3%A9on+Blum+56100+Lorient" rel="noopener">Voir l'agence sur la carte {I["arrow"]}</a>
+<a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=8+mail+Jeanne+Villepreux-Power+56100+Lorient" rel="noopener">Voir l'agence sur la carte {I["arrow"]}</a>
 </div></div></section>'''
-page("contact.html","Contact · KAIRN, courtier à Lorient","Contactez KAIRN, courtier en financement à Lorient : étude gratuite, rappel sous 24 h ouvrées. 09 84 23 08 44, 41 boulevard Léon Blum.",contact)
+page("contact.html","Contact · KAIRN, courtier à Lorient","Contactez KAIRN, courtier en financement à Lorient : étude gratuite, rappel sous 24 h ouvrées. 09 84 23 08 44, 8 mail Jeanne Villepreux-Power.",contact)
 
 # ---------- MENTIONS ----------
 T = lambda s: f'<span class="todo">{s}</span>'

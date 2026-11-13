@@ -3,7 +3,7 @@ OUT = sys.argv[1]; MODE = sys.argv[2]  # MODE: "site" (fichiers complets) ou "ar
 os.makedirs(OUT, exist_ok=True)
 
 PHONE = "09 84 23 08 44"; TEL = "+33984230844"; MAIL = "contact@kairn-finance.fr"
-ADDR = "41 boulevard Léon Blum, 56100 Lorient"
+ADDR = "8 mail Jeanne Villepreux-Power, 56100 Lorient"
 
 def ic(path, w=1.8):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{path}</svg>'
@@ -188,7 +188,7 @@ REVIEWS = '''<div class="reviews">
 </div>'''
 
 def schema():
-    return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 9 84 23 08 44","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"41 boulevard Léon Blum","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Fr 13:30-18:00"],"identifier":"ORIAS 14003265"}</script>'''
+    return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 9 84 23 08 44","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Fr 13:30-18:00"],"identifier":"ORIAS 14003265"}</script>'''
 
 def page(fname, title, desc, body, active=None):
     head = f'''<title>{title}</title>

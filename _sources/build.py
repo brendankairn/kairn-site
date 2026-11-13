@@ -62,7 +62,7 @@ def footer():
 <div><h4>Expertises</h4><ul>{exp}<li><a href="pret-hypothecaire.html#seniors">Viager hypothécaire et réméré</a></li></ul></div>
 <div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
 <div><h4>Nous joindre</h4><ul><li><a class="num" href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{MAIL}">{MAIL}</a></li><li>{ADDR}</li><li>Lun–ven 9h–12h / 13h30–18h<br>Samedi sur rendez-vous</li>
-<li><a href="https://www.linkedin.com/in/brendan-le-roux-aa2152153/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/vanetyslorient" rel="noopener">Facebook</a></li></ul></div>
+<li><a href="https://www.linkedin.com/company/119024045/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/vanetyslorient" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kairn_finance/" rel="noopener">Instagram</a></li></ul></div>
 </div>
 <div class="legal">
 <p>KAIRN est le nom commercial de BMB Financement, RCS Lorient 800 090 607. Immatriculé à l'ORIAS sous le n° 14003265 en qualité de courtier en opérations de banque et en services de paiement (COBSP), de mandataire d'intermédiaire en opérations de banque (MIOBSP) et de mandataire d'intermédiaire d'assurance (MIA), vérifiable sur <a href="https://www.orias.fr" rel="noopener">orias.fr</a>.</p>
@@ -191,7 +191,7 @@ REVIEWS = '''<div class="reviews">
 </div>'''
 
 def schema():
-    return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Fr 13:30-18:00"],"identifier":"ORIAS 14003265","sameAs":["https://www.facebook.com/vanetyslorient","https://www.linkedin.com/in/brendan-le-roux-aa2152153/"]}</script>'''
+    return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Fr 13:30-18:00"],"identifier":"ORIAS 14003265","sameAs":["https://www.facebook.com/vanetyslorient","https://www.linkedin.com/company/119024045/","https://www.instagram.com/kairn_finance/"]}</script>'''
 
 def page(fname, title, desc, body, active=None):
     head = f'''<title>{title}</title>

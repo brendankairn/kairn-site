@@ -51,7 +51,7 @@ home = f'''
 
 <section class="section white"><div class="wrap">
 <div class="section-head" style="max-width:none;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px"><div style="display:grid;gap:14px"><span class="eyebrow">Avis clients</span><h2>Ils nous ont confié leur projet</h2></div>
-<div class="rating"><b>4,9</b><div><div class="stars">★★★★★</div><span style="color:var(--muted);font-size:.85rem">230 avis Google</span></div></div></div>
+<a class="rating" href="https://www.google.com/maps/search/?api=1&query=KAIRN+8+mail+Jeanne+Villepreux+Lorient" rel="noopener" style="text-decoration:none"><b>5,0</b><div><div class="stars">★★★★★</div><span style="color:var(--muted);font-size:.85rem">204 avis Google · voir tous les avis</span></div></a></div>
 {REVIEWS}</div></section>
 
 <section class="section"><div class="wrap split">

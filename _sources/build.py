@@ -199,7 +199,7 @@ def page(fname, title, desc, body, active=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}'''
-    content = f'{header(active or fname)}<main>{body}</main>{footer()}<script src="main.js"></script>'
+    content = f'{header(active or fname)}<main>{body}</main>{footer()}{'<script>window.KAIRN_FORM_ENDPOINT="envoi.php";</script>' if MODE=='site' else ''}<script src="main.js"></script>'
     if MODE=="artifact" and fname=="index.html":
         html = head + "\n" + content
     else:

@@ -207,12 +207,12 @@ contact = page_hero("Contact","Contact","Parlons de <span class='u'>votre projet
 <p class="fine">Gratuit et sans engagement. Aucun versement ne peut vous être demandé avant l'obtention de votre prêt.</p></div>
 <div class="done" hidden>{I["done"]}<h3>Demande bien reçue</h3><p class="fine">Un expert KAIRN vous rappelle sous 24 h ouvrées.</p></div><div class="fail done" hidden><h3>L'envoi n'a pas abouti</h3><p class="fine">Appelez-nous au <span class="num">{PHONE}</span>.</p></div></form>
 <div style="display:grid;gap:18px">
-<div class="panel">{ticks([("Par téléphone", PHONE + " · appel non surtaxé"),("Par e-mail", MAIL),("À l'agence", ADDR),("Horaires","Lundi au vendredi 9h–12h / 13h30–18h · samedi sur rendez-vous")])}</div>
+<div class="panel">{ticks([("Par téléphone", PHONE + ""),("Par e-mail", MAIL),("À l'agence", ADDR),("Horaires","Lundi au vendredi 9h–12h / 13h30–18h · samedi sur rendez-vous")])}</div>
 <div class="panel" style="background:var(--ink);color:#fff;border-color:var(--ink)"><span class="eyebrow" style="color:#a9c1cf">Nos engagements</span><ul class="ticks" style="margin-top:14px">
 <li>{I["clock"]}<div><b style="color:#fff">Réponse sous 24 h ouvrées</b></div></li><li>{I["gift"]}<div><b style="color:#fff">Étude de financement gratuite</b></div></li><li>{I["shield"]}<div><b style="color:#fff">Calcul gratuit de votre économie d'assurance</b></div></li><li>{I["euro"]}<div><b style="color:#fff">Honoraires uniquement en cas de succès</b></div></li></ul></div>
 <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=8+mail+Jeanne+Villepreux-Power+56100+Lorient" rel="noopener">Voir l'agence sur la carte {I["arrow"]}</a>
 </div></div></section>'''
-page("contact.html","Contact · KAIRN, courtier à Lorient","Contactez KAIRN, courtier en financement à Lorient : étude gratuite, rappel sous 24 h ouvrées. 09 84 23 08 44, 8 mail Jeanne Villepreux-Power.",contact)
+page("contact.html","Contact · KAIRN, courtier à Lorient","Contactez KAIRN, courtier en financement à Lorient : étude gratuite, rappel sous 24 h ouvrées. 06 44 31 10 93, 8 mail Jeanne Villepreux-Power.",contact)
 
 # ---------- MENTIONS ----------
 T = lambda s: f'<span class="todo">{s}</span>'

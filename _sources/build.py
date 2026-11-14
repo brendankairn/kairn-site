@@ -61,6 +61,7 @@ def footer():
 <div><a class="brand" href="index.html" aria-label="KAIRN, accueil">{LOGO_FULL}</a>
 <p style="margin-top:18px;max-width:34ch">Courtier en financement à Lorient. Nous accompagnons particuliers et professionnels en Bretagne et partout en France.</p></div>
 <div><h4>Expertises</h4><ul>{exp}<li><a href="pret-hypothecaire.html#seniors">Viager hypothécaire et réméré</a></li></ul></div>
+<div><h4>Nos secteurs</h4><ul><li><a href="courtier-lorient.html">Lorient</a></li><li><a href="courtier-pays-de-lorient.html">Pays de Lorient</a></li><li><a href="courtier-vannes.html">Vannes et le golfe</a></li><li><a href="courtier-auray-carnac-quiberon.html">Auray · Carnac · Quiberon</a></li><li><a href="courtier-quimperle.html">Quimperlé</a></li><li><a href="courtier-pontivy.html">Pontivy</a></li><li><a href="courtier-morbihan.html">Morbihan</a></li><li><a href="courtier-bretagne.html">Bretagne</a></li></ul></div>
 <div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
 <div><h4>Nous joindre</h4><ul><li><a class="num" href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{MAIL}">{MAIL}</a></li><li>{ADDR}</li><li>Lun–ven 9h–12h / 13h30–18h<br>Samedi sur rendez-vous</li>
 <li><a href="https://www.linkedin.com/company/119024045/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/vanetyslorient" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kairn_finance/" rel="noopener">Instagram</a></li></ul></div>
@@ -70,7 +71,20 @@ def footer():
 <p><strong>Aucun versement, de quelque nature que ce soit, ne peut être exigé d'un particulier avant l'obtention d'un ou plusieurs prêts d'argent.</strong> Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager. L'emprunteur dispose d'un délai de réflexion de 10 jours pour un crédit immobilier ; la vente est subordonnée à l'obtention du prêt, et si celui-ci n'est pas obtenu, le vendeur doit rembourser les sommes versées.</p>
 <p>© 2026 KAIRN — BMB Financement · <a href="mentions-legales.html">Mentions légales</a> · <a href="mentions-legales.html#confidentialite">Confidentialité</a></p>
 </div></div></footer>
-<div class="mobile-bar"><a class="btn btn-outline" href="tel:{TEL}">{I["phone"].replace('<svg','<svg width="18" height="18"')} Appeler</a><a class="btn btn-primary" href="contact.html">Étude gratuite</a></div>'''
+<button class="callback-fab" type="button" data-callback>{I["phone"].replace('<svg','<svg width="18" height="18"')} Être rappelé</button>
+<dialog class="callback" id="callback" aria-labelledby="cb-title"><form class="cb-form" data-form="Rappel" novalidate><div class="form-body">
+<button class="cb-close" type="button" data-close aria-label="Fermer">×</button>
+<h2 id="cb-title">Être rappelé</h2><p class="fine" style="margin-top:6px">Un expert vous rappelle sous 24 h ouvrées. Gratuit et sans engagement.</p>
+<div class="field" style="margin-top:16px"><label for="cb-nom">Nom et prénom</label><input id="cb-nom" name="nom" autocomplete="name" required></div>
+<div class="field"><label for="cb-tel">Téléphone</label><input id="cb-tel" name="telephone" type="tel" autocomplete="tel" required></div>
+<div class="field"><label for="cb-besoin">Votre projet</label><select id="cb-besoin" name="besoin"><option>Crédit immobilier</option><option>Regroupement de crédits</option><option>Prêt hypothécaire</option><option>Prêt professionnel</option><option>Assurance de prêt</option><option>Autre</option></select></div>
+<div class="field"><label for="cb-creneau">Quand ?</label><select id="cb-creneau" name="creneau"><option>Dès que possible</option><option>Le matin (9h–12h)</option><option>L'après-midi (13h30–18h)</option><option>Le samedi</option></select></div>
+<input class="hp" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="check"><input type="checkbox" required> J'accepte d'être recontacté par KAIRN au sujet de mon projet. <a href="mentions-legales.html#confidentialite">Données personnelles</a></label>
+<button class="btn btn-primary" type="submit" style="margin-top:16px;width:100%;justify-content:center">Me rappeler {I["arrow"]}</button></div>
+<div class="done" hidden>{I["done"]}<h3>C'est noté</h3><p class="fine">Un expert KAIRN vous rappelle sous 24 h ouvrées.</p><button class="btn btn-outline" type="button" data-close style="margin-top:14px">Fermer</button></div>
+<div class="fail done" hidden><h3>L'envoi n'a pas abouti</h3><p class="fine">Appelez-nous au <span class="num">{PHONE}</span>.</p></div></form></dialog>
+<div class="mobile-bar"><a class="btn btn-outline" href="tel:{TEL}">{I["phone"].replace('<svg','<svg width="18" height="18"')} Appeler</a><button class="btn btn-primary" type="button" data-callback>Être rappelé</button></div>'''
 
 def lead_wizard():
     projets = [("immo","home","Achat immobilier"),("rachat","merge","Regrouper mes crédits"),("pro","pro","Projet professionnel"),("hypo","key","Prêt hypothécaire"),("assurance","shield","Assurance de prêt"),("autre","plus","Autre projet")]
@@ -164,6 +178,26 @@ def sim_pro(p="pro"):
 <p class="fine">Calcul indicatif hors assurance, garanties et frais de dossier. Le taux dépend du projet, de l'apport et des garanties proposées.</p>
 <a class="btn btn-light" href="contact.html#pro">Présenter mon projet {I["arrow"]}</a></div></div>'''
 
+def sim_lead(p, label):
+    return f'''<form class="sim-lead" data-form="Simulation · {label}" data-sim-src="{p}" novalidate><div class="form-body">
+<div class="sim-lead-text"><b>Recevez votre étude détaillée</b><span>Un expert reprend votre simulation avec vos vrais chiffres et vous rappelle sous 24 h ouvrées. Gratuit.</span></div>
+<div class="sim-lead-fields"><input name="nom" placeholder="Nom et prénom" autocomplete="name" aria-label="Nom et prénom" required><input name="telephone" type="tel" placeholder="Téléphone" autocomplete="tel" aria-label="Téléphone" required>
+<input type="hidden" name="besoin" value="{label}"><input type="hidden" name="message" value=""><input class="hp" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn btn-primary" type="submit">Être rappelé {I["arrow"]}</button></div>
+<label class="check"><input type="checkbox" required> J'accepte d'être recontacté par KAIRN au sujet de mon projet. <a href="mentions-legales.html#confidentialite">Données personnelles</a></label></div>
+<div class="done" hidden>{I["done"]}<div><b>C'est noté.</b> Un expert vous rappelle sous 24 h ouvrées avec votre étude.</div></div><div class="fail done" hidden><div>L'envoi n'a pas abouti. Appelez-nous au <span class="num">{PHONE}</span>.</div></div></form>'''
+
+def _with_lead(fn, label):
+    def w(p=None):
+        p = p or fn.__defaults__[0]
+        return f'<div class="sim-wrap" id="sw-{p}">' + fn(p) + sim_lead(p, label) + '</div>'
+    return w
+sim_capacite = _with_lead(sim_capacite, "Capacité d'emprunt")
+sim_rachat = _with_lead(sim_rachat, "Regroupement de crédits")
+sim_assurance = _with_lead(sim_assurance, "Assurance de prêt")
+sim_hypo = _with_lead(sim_hypo, "Prêt hypothécaire")
+sim_pro = _with_lead(sim_pro, "Prêt professionnel")
+
 def stats():
     return '''<div class="stats"><div class="stat"><b>2 200</b><span>dossiers financés</span></div><div class="stat"><b>94 %</b><span>de taux d'accord</span></div><div class="stat"><b>+30</b><span>partenaires bancaires</span></div><div class="stat"><b>15 ans</b><span>d'expertise du courtage</span></div></div>'''
 
@@ -194,7 +228,16 @@ REVIEWS = '''<div class="reviews">
 def schema():
     return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Fr 13:30-18:00"],"identifier":"ORIAS 14003265","sameAs":["https://www.facebook.com/vanetyslorient","https://www.linkedin.com/company/119024045/","https://www.instagram.com/kairn_finance/"]}</script>'''
 
-def page(fname, title, desc, body, active=None):
+def local_schema(fname, z):
+    import json
+    d={"@context":"https://schema.org","@graph":[
+      {"@type":"FinancialService","name":"KAIRN","url":"https://kairn-finance.com/"+fname,"telephone":"+33 6 44 31 10 93","priceRange":"Étude gratuite",
+       "address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},
+       "areaServed":[c.strip().rstrip(".") for c in z["communes"].split(",")][:15],"parentOrganization":{"@type":"Organization","name":"KAIRN","url":"https://kairn-finance.com/"}},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kairn-finance.com/"},{"@type":"ListItem","position":2,"name":"Courtier "+z["court"],"item":"https://kairn-finance.com/"+fname}]}]}
+    return '<script type="application/ld+json">'+json.dumps(d,ensure_ascii=False)+'</script>'
+
+def page(fname, title, desc, body, active=None, local=None):
     head = f'''<title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -203,7 +246,7 @@ def page(fname, title, desc, body, active=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}'''
+<link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}{local_schema(fname, local) if local else ""}'''
     content = f'{header(active or fname)}<main>{body}</main>{footer()}{'<script>window.KAIRN_FORM_ENDPOINT="envoi.php";</script>' if MODE=='site' else ''}<script src="main.js"></script>'
     if MODE=="artifact" and fname=="index.html":
         html = head + "\n" + content
@@ -214,13 +257,14 @@ def page(fname, title, desc, body, active=None):
     open(os.path.join(OUT,fname),"w").write(html)
 
 exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
+exec(open(os.path.join(os.path.dirname(__file__) or ".","locales.py")).read())
 for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
     shutil.copy(f, OUT)
 
 if MODE=="site":
     import datetime
     today=datetime.date.today().isoformat()
-    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","contact.html","mentions-legales.html"]
+    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")

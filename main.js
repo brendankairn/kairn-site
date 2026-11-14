@@ -111,9 +111,26 @@
     show(0);
   });
 
+  /* Résumé d'une simulation joint à la demande */
+  function simSummary(form){
+    var wrap=form.closest(".sim-wrap");if(!wrap)return;var box=wrap.querySelector("[data-sim]");if(!box)return;
+    var parts=[];
+    box.querySelectorAll("input[type=range]").forEach(function(r){var l=box.querySelector('label[for="'+r.id+'"]');var o=box.querySelector('output[for="'+r.id+'"]');
+      parts.push((l?l.childNodes[0].textContent.trim():r.name)+" : "+(o?o.textContent:r.value));});
+    box.querySelectorAll(".sim-out [data-out]").forEach(function(el){var lab=el.previousElementSibling&&el.previousElementSibling.classList.contains("out-label")?el.previousElementSibling.textContent:(el.parentNode.childNodes[0].textContent||el.dataset.out);
+      parts.push(lab.trim()+" : "+el.textContent);});
+    var m=form.querySelector('input[name="message"]');if(m)m.value="Simulation — "+parts.join(" | ");
+  }
+
+  /* Bouton « Être rappelé » */
+  var dlg=document.getElementById("callback");
+  document.querySelectorAll("[data-callback]").forEach(function(b){b.addEventListener("click",function(){if(dlg&&dlg.showModal){dlg.showModal();var f=dlg.querySelector("input");if(f)f.focus();}else location.href="contact.html";});});
+  if(dlg){dlg.querySelectorAll("[data-close]").forEach(function(b){b.addEventListener("click",function(){dlg.close();});});
+    dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});}
+
   /* Formulaires simples */
   document.querySelectorAll("form[data-form]").forEach(function(form){
-    form.addEventListener("submit",function(e){e.preventDefault();if(!valid(form))return;
+    form.addEventListener("submit",function(e){e.preventDefault();if(!valid(form))return;simSummary(form);
       var btn=form.querySelector("[type=submit]");btn.disabled=true;
       send(form,{formulaire:form.dataset.form}).then(function(ok){
         form.querySelector(".form-body").hidden=true;var d=form.querySelector(ok?".done":".fail");if(d)d.hidden=false;});

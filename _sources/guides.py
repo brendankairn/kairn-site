@@ -136,6 +136,134 @@ dict(
         ("Mon conjoint doit-il signer ?","Pour le logement de la famille, un couple marié doit donner son accord à deux, même si un seul des époux est propriétaire."),
         ("Est-ce possible à la retraite ?","Oui. C'est même l'une des situations où le prêt hypothécaire, ou le prêt viager hypothécaire, est le plus souvent utile.")]
 ),
+dict(
+  f="guide-regroupement-credits.html",
+  court="Regroupement de crédits",
+  tag="Regroupement de crédits",
+  seo=("Regroupement de crédits : quand est-ce une bonne idée ? | KAIRN",
+       "Regrouper ses crédits pour baisser ses mensualités : principe, coûts, durée, règles de protection et pièges à éviter. Le guide KAIRN, courtier à Lorient."),
+  h1="Regroupement de crédits : quand est-ce une bonne idée ?",
+  chapo="Plusieurs crédits, plusieurs prélèvements, un budget qui se tend chaque mois. Le regroupement de crédits peut redonner de l'air, à condition de bien mesurer ce qu'il coûte. Voici comment le juger.",
+  minutes=5,
+  points=[("Une seule mensualité","Tous vos crédits remplacés par un seul prêt."),
+          ("Plus d'air chaque mois","La mensualité baisse, la durée s'allonge."),
+          ("Un coût à mesurer","Le coût total augmente presque toujours.")],
+  body='''
+<h2 id="principe">Le principe</h2>
+<p>Un établissement rachète vos crédits en cours (crédit immobilier, prêts personnels, crédit auto, crédits renouvelables) et les remplace par <strong>un seul prêt</strong>. Vous n'avez plus qu'une mensualité, en général plus basse, parce qu'elle est étalée sur une durée plus longue.</p>
+<p>On peut aussi y ajouter une trésorerie pour un projet : des travaux, une voiture, une dépense imprévue.</p>
+
+<h2 id="quand">Quand y penser ?</h2>
+<ul class="guide-list">
+<li><b>Votre budget est trop serré.</b> Les mensualités cumulées pèsent trop lourd et l'épargne ne se reconstitue plus.</li>
+<li><b>Vos revenus changent.</b> Départ à la retraite, séparation, baisse d'activité.</li>
+<li><b>Vous avez un nouveau projet.</b> Regrouper peut libérer la capacité de remboursement nécessaire.</li>
+</ul>
+<p>Le regroupement n'est pas une solution pour des difficultés qui durent sans cause identifiée. Dans ce cas, nous vous le dirons franchement.</p>
+
+<h2 id="cout">Ce que ça coûte vraiment</h2>
+<p>Allonger la durée fait baisser la mensualité, mais augmente presque toujours le <strong>coût total</strong> des intérêts. Il faut aussi compter les frais de dossier, les éventuelles indemnités de remboursement anticipé de vos prêts actuels, et les frais de garantie.</p>
+<p>Pour un crédit immobilier, ces indemnités sont plafonnées par la loi : 6 mois d'intérêts, dans la limite de 3 % du capital restant dû. Pour les crédits à la consommation, elles sont encore plus limitées.</p>
+
+<h2 id="regles">Les règles qui vous protègent</h2>
+<p>Si la part de crédit immobilier dépasse 60 % du total regroupé, le nouveau prêt suit les règles du crédit immobilier : une offre écrite et un <strong>délai de réflexion de 10 jours</strong> avant de pouvoir l'accepter. En dessous, ce sont les règles du crédit à la consommation, avec un <strong>délai de rétractation de 14 jours</strong> après la signature.</p>
+<p>Si vous êtes propriétaire, le regroupement peut être garanti par une hypothèque. Il permet alors souvent une durée plus longue et un taux plus bas. Voir notre <a href="guide-pret-hypothecaire.html">guide du prêt hypothécaire</a>.</p>
+
+<h2 id="courtier">Notre méthode</h2>
+<p>Nous commençons par faire le point sur tous vos crédits, et nous comparons la situation actuelle avec plusieurs scénarios de regroupement : mensualité, durée et coût total. Vous voyez noir sur blanc ce que vous gagnez chaque mois et ce que vous payez en plus sur la durée. Ensuite seulement, vous décidez.</p>
+''',
+  sim="sim_rachat", sim_titre="Simulez votre regroupement",
+  lien=("rachat-de-credits.html","Notre service regroupement de crédits"),
+  faqs=[("Peut-on regrouper ses crédits sans être propriétaire ?","Oui. Les locataires peuvent regrouper leurs crédits à la consommation. Les conditions dépendent surtout des revenus et du niveau d'endettement."),
+        ("Mon crédit renouvelable sera-t-il fermé ?","Oui, en général. Le regroupement rembourse le solde, et le contrat est clôturé pour éviter de se réendetter."),
+        ("Est-ce possible à la retraite ?","Oui. L'âge est pris en compte pour la durée et l'assurance, mais beaucoup de retraités regroupent leurs crédits, souvent avec une garantie hypothécaire.")]
+),
+dict(
+  f="guide-pret-professionnel.html",
+  court="Prêt professionnel",
+  tag="Prêt professionnel",
+  seo=("Prêt professionnel : comment convaincre sa banque | KAIRN",
+       "Création, reprise, murs, matériel ou trésorerie : ce que la banque regarde pour un prêt professionnel, les garanties demandées et le dossier à préparer. Le guide KAIRN."),
+  h1="Prêt professionnel : comment convaincre sa banque",
+  chapo="Créer, reprendre, investir : un projet professionnel se joue souvent sur la qualité du dossier présenté à la banque. Voici ce qu'elle regarde, et comment préparer le vôtre.",
+  minutes=5,
+  points=[("Un dossier solide","Chiffres, prévisionnel et projet bien expliqués."),
+          ("Un apport","Il montre votre engagement dans le projet."),
+          ("Des garanties","Caution, nantissement, garantie Bpifrance.")],
+  body='''
+<h2 id="projets">Quels projets financer ?</h2>
+<ul class="guide-list">
+<li><b>Création ou reprise.</b> Rachat d'un fonds de commerce, de parts sociales, d'une clientèle.</li>
+<li><b>Murs professionnels.</b> L'achat de vos locaux, en direct ou par une SCI.</li>
+<li><b>Équipement.</b> Matériel, véhicules, aménagement.</li>
+<li><b>Trésorerie et développement.</b> Besoin en fonds de roulement, recrutement, nouveau local.</li>
+</ul>
+
+<h2 id="banque">Ce que la banque regarde</h2>
+<p>Pour une entreprise existante, la banque analyse les <strong>derniers bilans</strong> : chiffre d'affaires, rentabilité, endettement, trésorerie. Pour une création ou une reprise, tout repose sur le <strong>prévisionnel</strong> et sur votre parcours.</p>
+<p>Elle veut comprendre trois choses : pourquoi le projet va fonctionner, comment l'entreprise remboursera, et ce qui se passe si ça va moins bien que prévu.</p>
+
+<h2 id="apport">L'apport</h2>
+<p>La banque attend presque toujours un apport personnel. Il montre que vous prenez votre part du risque. Son niveau dépend du projet et du secteur : il est souvent plus élevé pour une création que pour l'achat de murs ou de matériel.</p>
+
+<h2 id="garanties">Les garanties</h2>
+<p>Selon le projet, la banque peut demander une <strong>caution personnelle</strong> du dirigeant, un <strong>nantissement</strong> du fonds de commerce ou des parts, une hypothèque sur les murs, ou une <strong>garantie de Bpifrance</strong>, qui couvre une partie du risque et limite la caution demandée.</p>
+<p>Tout se négocie : le montant de la caution, sa durée, son plafond. C'est un point sur lequel un courtier fait souvent la différence.</p>
+
+<h2 id="dossier">Le dossier à préparer</h2>
+<ol class="guide-steps">
+<li><b>La présentation du projet.</b> Ce que vous faites, pour qui, et pourquoi maintenant.</li>
+<li><b>Les chiffres.</b> Bilans des dernières années ou prévisionnel sur trois ans, fait avec votre expert-comptable.</li>
+<li><b>Le plan de financement.</b> Le besoin total, votre apport, le prêt demandé.</li>
+<li><b>Votre situation personnelle.</b> Patrimoine, crédits en cours, revenus du foyer.</li>
+</ol>
+<p>Nous montons ce dossier avec vous, puis nous le présentons aux banques les plus adaptées à votre secteur et à votre taille.</p>
+''',
+  sim="sim_pro", sim_titre="Simulez votre prêt professionnel",
+  lien=("pret-professionnel.html","Notre service prêt professionnel"),
+  faqs=[("Combien de temps faut-il pour obtenir un prêt professionnel ?","Comptez généralement quelques semaines entre le dépôt d'un dossier complet et l'accord. Un dossier bien préparé fait gagner beaucoup de temps."),
+        ("Faut-il passer par sa banque habituelle ?","Pas forcément. Votre banque connaît vos comptes, mais d'autres peuvent être plus à l'aise avec votre secteur ou votre projet. Nous les mettons en concurrence."),
+        ("Peut-on financer l'achat des murs par une SCI ?","Oui, c'est fréquent. La SCI achète les locaux et les loue à votre société. Le montage se réfléchit avec votre expert-comptable.")]
+),
+dict(
+  f="guide-premier-achat.html",
+  court="Premier achat",
+  tag="Prêt immobilier",
+  seo=("Premier achat immobilier : les étapes du financement | KAIRN",
+       "Budget, apport, frais de notaire, compromis, offre de prêt et délais : les étapes d'un premier achat immobilier, expliquées simplement. Le guide KAIRN, courtier à Lorient."),
+  h1="Premier achat immobilier : les étapes du financement",
+  chapo="Un premier achat, c'est beaucoup de questions et un calendrier serré. Voici les étapes dans l'ordre, pour savoir à chaque moment ce qui vous attend.",
+  minutes=6,
+  points=[("Avant de visiter","Connaître votre budget réel."),
+          ("Au compromis","Une condition suspensive de prêt vous protège."),
+          ("Avant de signer","10 jours de réflexion sur l'offre de prêt.")],
+  body='''
+<h2 id="budget">1. Définir votre budget</h2>
+<p>Avant les visites, faites le point sur ce que les banques accepteront de vous prêter : revenus, charges, apport, durée. Notre <a href="guide-capacite-emprunt-35.html">guide de la capacité d'emprunt</a> explique les règles. Une étude avec un courtier vous donne un chiffre réaliste, et une attestation de financement qui rassure les vendeurs.</p>
+
+<h2 id="apport">2. Préparer l'apport et les frais</h2>
+<p>En plus du prix, prévoyez les <strong>frais de notaire</strong> : environ 7 à 8 % du prix dans l'ancien, 2 à 3 % dans le neuf. Ajoutez les frais de garantie du prêt et, le cas échéant, les frais d'agence.</p>
+<p>Les banques aiment que l'apport couvre au moins ces frais. Ce n'est pas toujours obligatoire, mais c'est souvent ce qui fait la différence.</p>
+
+<h2 id="aides">3. Vérifier les aides</h2>
+<p>Le <strong>prêt à taux zéro</strong> peut compléter votre financement pour une première résidence principale, sous conditions de ressources. Ses règles évoluent régulièrement : nous vérifions votre éligibilité au moment de l'étude. Selon votre employeur, un prêt Action Logement peut aussi être possible.</p>
+
+<h2 id="compromis">4. Signer le compromis</h2>
+<p>Le compromis de vente contient une <strong>condition suspensive d'obtention de prêt</strong> : si vous n'obtenez pas votre financement aux conditions prévues, vous récupérez votre dépôt de garantie. Le délai pour obtenir le prêt est d'au moins un mois. En pratique, on prévoit souvent 45 à 60 jours.</p>
+<p>Vous disposez aussi d'un délai de rétractation de 10 jours après la signature du compromis.</p>
+
+<h2 id="offre">5. Obtenir l'offre de prêt</h2>
+<p>Nous présentons votre dossier à plusieurs banques et négocions le taux, l'assurance et les conditions. Une fois l'accord obtenu, la banque émet une <strong>offre de prêt</strong>. La loi impose un délai de réflexion de <strong>10 jours</strong> avant de pouvoir l'accepter.</p>
+
+<h2 id="acte">6. Signer chez le notaire</h2>
+<p>Le notaire reçoit les fonds de la banque et organise la signature de l'acte authentique. Vous recevez les clés le jour même. Vos premières mensualités commencent en général le mois suivant.</p>
+''',
+  sim="sim_capacite", sim_titre="Calculez votre budget",
+  lien=("credit-immobilier.html","Notre service prêt immobilier"),
+  faqs=[("Combien de temps entre le compromis et l'acte ?","Comptez en général deux à trois mois, le temps d'obtenir le prêt et que le notaire réunisse les documents."),
+        ("Faut-il voir sa banque avant un courtier ?","Vous pouvez faire les deux. Un courtier compare plusieurs banques, dont la vôtre si elle est bien placée."),
+        ("Peut-on acheter seul ?","Bien sûr. Le budget est calculé sur vos seuls revenus, et la banque regardera de près votre reste à vivre.")]
+),
 ]
 
 GUIDES_HUB = "guides.html"
@@ -157,7 +285,7 @@ def guide_schema(g):
 
 import re as _re
 for g in GUIDES:
-    toc = "".join(f'<li><a href="#{a}">{t}</a></li>' for a,t in _re.findall(r'<h2 id="([^"]+)">([^<]+)</h2>', g["body"]))
+    toc = "".join(f'<li><a href="#{a}">{_re.sub(r"^\\d+\\. ","",t)}</a></li>' for a,t in _re.findall(r'<h2 id="([^"]+)">([^<]+)</h2>', g["body"]))
     pts = "".join(f'<div><b>{b}</b><span>{s}</span></div>' for b,s in g["points"])
     simfn = globals()[g["sim"]]
     body = f'''

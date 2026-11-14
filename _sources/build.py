@@ -48,7 +48,7 @@ def header(active):
 <a class="brand" href="index.html" aria-label="KAIRN, accueil">{LOGO_FULL}</a>
 <ul class="menu" id="menu">
 <li class="has-sub"><button type="button" aria-expanded="false" aria-haspopup="true">Nos expertises ▾</button><ul class="sub">{sub}</ul></li>
-{a("simulateurs.html","Simulateurs")}{a("cabinet.html","Le cabinet")}{a("cabinet.html#recrutement","Recrutement")}{a("contact.html","Contact")}
+{a("simulateurs.html","Simulateurs")}{a("guides.html","Guides")}{a("cabinet.html","Le cabinet")}{a("cabinet.html#recrutement","Recrutement")}{a("contact.html","Contact")}
 </ul>
 <div class="nav-cta"><a class="nav-phone num" href="tel:{TEL}">{PHONE}</a><a class="btn btn-light btn-sm" href="contact.html">Étude gratuite</a>
 <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
@@ -62,7 +62,7 @@ def footer():
 <p style="margin-top:18px;max-width:34ch">Courtier en financement à Lorient. Nous accompagnons particuliers et professionnels en Bretagne et partout en France.</p></div>
 <div><h4>Expertises</h4><ul>{exp}<li><a href="pret-hypothecaire.html#seniors">Viager hypothécaire et réméré</a></li></ul></div>
 <div><h4>Nos secteurs</h4><ul><li><a href="courtier-lorient.html">Lorient</a></li><li><a href="courtier-pays-de-lorient.html">Pays de Lorient</a></li><li><a href="courtier-vannes.html">Vannes et le golfe</a></li><li><a href="courtier-auray-carnac-quiberon.html">Auray · Carnac · Quiberon</a></li><li><a href="courtier-quimperle.html">Quimperlé</a></li><li><a href="courtier-pontivy.html">Pontivy</a></li><li><a href="courtier-morbihan.html">Morbihan</a></li><li><a href="courtier-bretagne.html">Bretagne</a></li></ul></div>
-<div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="guides.html">Guides pratiques</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
 <div><h4>Nous joindre</h4><ul><li><a class="num" href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{MAIL}">{MAIL}</a></li><li>{ADDR}</li><li>Lun–ven 9h–12h / 13h30–18h<br>Samedi sur rendez-vous</li>
 <li><a href="https://www.linkedin.com/company/119024045/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/vanetyslorient" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kairn_finance/" rel="noopener">Instagram</a></li></ul></div>
 </div>
@@ -237,7 +237,7 @@ def local_schema(fname, z):
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kairn-finance.com/"},{"@type":"ListItem","position":2,"name":"Courtier "+z["court"],"item":"https://kairn-finance.com/"+fname}]}]}
     return '<script type="application/ld+json">'+json.dumps(d,ensure_ascii=False)+'</script>'
 
-def page(fname, title, desc, body, active=None, local=None):
+def page(fname, title, desc, body, active=None, local=None, extra_head=""):
     head = f'''<title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -246,7 +246,7 @@ def page(fname, title, desc, body, active=None, local=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}{local_schema(fname, local) if local else ""}'''
+<link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}{local_schema(fname, local) if local else ""}{extra_head}'''
     content = f'{header(active or fname)}<main>{body}</main>{footer()}{'<script>window.KAIRN_FORM_ENDPOINT="envoi.php";</script>' if MODE=='site' else ''}<script src="main.js"></script>'
     if MODE=="artifact" and fname=="index.html":
         html = head + "\n" + content
@@ -258,13 +258,14 @@ def page(fname, title, desc, body, active=None, local=None):
 
 exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","locales.py")).read())
+exec(open(os.path.join(os.path.dirname(__file__) or ".","guides.py")).read())
 for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
     shutil.copy(f, OUT)
 
 if MODE=="site":
     import datetime
     today=datetime.date.today().isoformat()
-    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]
+    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+["guides.html"]+[g["f"] for g in GUIDES]
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")

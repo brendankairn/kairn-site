@@ -285,7 +285,7 @@ def guide_schema(g):
 
 import re as _re
 for g in GUIDES:
-    toc = "".join(f'<li><a href="#{a}">{_re.sub(r"^\\d+\\. ","",t)}</a></li>' for a,t in _re.findall(r'<h2 id="([^"]+)">([^<]+)</h2>', g["body"]))
+    toc = "".join('<li><a href="#%s">%s</a></li>' % (a, _re.sub(r"^\d+\. ", "", t)) for a,t in _re.findall(r'<h2 id="([^"]+)">([^<]+)</h2>', g["body"]))
     pts = "".join(f'<div><b>{b}</b><span>{s}</span></div>' for b,s in g["points"])
     simfn = globals()[g["sim"]]
     body = f'''

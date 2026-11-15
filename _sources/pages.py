@@ -159,10 +159,10 @@ sims = page_hero("Simulateurs","Simulateurs","Faites vos calculs <span class='u'
 page("simulateurs.html","Simulateurs de crédit · KAIRN","Simulateurs gratuits : capacité d'emprunt, regroupement de crédits, économie d'assurance de prêt, prêt hypothécaire et prêt professionnel.",sims)
 
 # ---------- CABINET ----------
-team = [("Brendan Le Roux","Fondateur et dirigeant"),("Aurélie Thouvard","Coordinatrice de financement"),("Valérie Le Barber","Experte immobilier et professionnel"),("Solen Rojouant","Experte en financement"),("Laëtitia Bernard","Experte prêts hypothécaires"),("Tifenn Le Bouëdec","Experte regroupement de crédits"),("Maxime Hellec","Expert en financement"),("Laëtitia Leven","Experte immobilier et professionnel"),("Anaïs Dietrich","Experte en financement")]
+team = [("Brendan Le Roux","Dirigeant, spécialisé en prêt hypothécaire","brendan-le-roux"),("Aurélie Thouvard","Coordinatrice de financement","aurelie-thouvard"),("Valérie Le Barber","Experte en prêt immobilier et professionnel","valerie-le-barber"),("Laëtitia Leven","Experte en prêt immobilier et professionnel","laetitia-leven"),("Solen Rojouant","Experte en prêt immobilier","solen-rojouant"),("Anaïs Dietrich","Experte en prêt immobilier","anais-dietrich"),("Maxime Hellec-Duval","Expert en prêt immobilier","maxime-hellec-duval"),("Laëtitia Bernard","Experte en regroupement de crédits et prêt hypothécaire","laetitia-bernard"),("Tifenn Le Bouëdec","Experte en regroupement de crédits","tifenn-le-bouedec")]
 def ini(n):
     p=n.replace("-"," ").split(); return (p[0][0]+p[-1][0]).upper()
-tm = "".join(f'<div class="member"><div class="avatar">{ini(n)}</div><div><b>{n}</b><span>{r}</span></div></div>' for n,r in team)
+tm = "".join(f'<div class="member"><img class="avatar" src="equipe/{ph}.jpg" alt="{n}" width="72" height="72" loading="lazy"><div><b>{n}</b><span>{r}</span></div></div>' for n,r,ph in team)
 cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>première pierre</span> de tout financement","Un cairn est un empilement de pierres qui guide le marcheur. C'est ce que nous voulons être pour vous : un repère fiable, posé pierre après pierre.") + f'''
 <section class="section"><div class="wrap split">
 <div class="prose"><span class="eyebrow">Notre histoire</span><h2 style="color:var(--text)">Un cabinet indépendant, exigeant et sur mesure</h2>

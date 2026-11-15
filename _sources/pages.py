@@ -201,7 +201,7 @@ def logos(items):
         inner = f'<img src="partenaires/{f}.png" alt="{nom}" loading="lazy">' if f else f'<span class="logo-txt">{nom}</span>'
         out.append(f'<figure class="logo-tile">{inner}<figcaption>{nom}</figcaption></figure>')
     return '<div class="logos">'+"".join(out)+'</div>'
-banques=[("La Banque Postale","lbp"),("Caisse d'Épargne Bretagne Pays de Loire","cebpl"),("Crédit Coopératif","ccoop"),("CCF","ccf"),("Société Générale","sg"),("BNP Paribas","bnp"),("CIC","cic"),("Crédit Agricole du Morbihan","ca"),("Banque Populaire Grand Ouest","bpgo"),("Crédit Mutuel de Bretagne","cmb"),("LCL",None)]
+banques=[("La Banque Postale","lbp"),("Caisse d'Épargne Bretagne Pays de Loire","cebpl"),("Crédit Coopératif","ccoop"),("CCF","ccf"),("Société Générale","sg"),("BNP Paribas","bnp"),("CIC","cic"),("Crédit Agricole du Morbihan","ca"),("Banque Populaire Grand Ouest","bpgo"),("Crédit Mutuel de Bretagne","cmb"),("LCL","lcl")]
 part = page_hero("Nos partenaires","Nos partenaires","Un réseau solide <span class='u'>à votre service</span>","Banques, notaires, spécialistes de l'assurance de prêt : nous travaillons main dans la main avec les acteurs qui comptent dans votre projet.") + f'''
 <section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">Banques</span><h2>Les banques avec lesquelles nous travaillons</h2><p class="lead">Pour chaque dossier, nous consultons plusieurs établissements en même temps et vous présentons l'offre la plus adaptée, pas celle d'une seule banque.</p></div>{logos(banques)}</div></section>
 <section class="section white"><div class="wrap split">

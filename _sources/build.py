@@ -62,7 +62,7 @@ def footer():
 <p style="margin-top:18px;max-width:34ch">Courtier en financement à Lorient. Nous accompagnons particuliers et professionnels en Bretagne et partout en France.</p></div>
 <div><h4>Expertises</h4><ul>{exp}<li><a href="pret-hypothecaire.html#seniors">Viager hypothécaire et réméré</a></li></ul></div>
 <div><h4>Nos secteurs</h4><ul><li><a href="courtier-lorient.html">Lorient</a></li><li><a href="courtier-pays-de-lorient.html">Pays de Lorient</a></li><li><a href="courtier-vannes.html">Vannes et le golfe</a></li><li><a href="courtier-auray-carnac-quiberon.html">Auray · Carnac · Quiberon</a></li><li><a href="courtier-quimperle.html">Quimperlé</a></li><li><a href="courtier-pontivy.html">Pontivy</a></li><li><a href="courtier-morbihan.html">Morbihan</a></li><li><a href="courtier-bretagne.html">Bretagne</a></li></ul></div>
-<div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="guides.html">Guides pratiques</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="guides.html">Guides pratiques</a></li><li><a href="partenaires.html">Nos partenaires</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
 <div><h4>Nous joindre</h4><ul><li><a class="num" href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{MAIL}">{MAIL}</a></li><li>{ADDR}</li><li>Lun–jeu 9h–12h / 13h30–18h<br>Ven 9h–12h / 13h30–17h<br>Samedi sur rendez-vous</li>
 <li><a href="https://www.linkedin.com/company/119024045/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/vanetyslorient" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kairn_finance/" rel="noopener">Instagram</a></li></ul></div>
 </div>
@@ -265,7 +265,7 @@ for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
 if MODE=="site":
     import datetime
     today=datetime.date.today().isoformat()
-    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+["guides.html"]+[g["f"] for g in GUIDES]
+    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","partenaires.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+["guides.html"]+[g["f"] for g in GUIDES]
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")

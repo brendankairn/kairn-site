@@ -194,6 +194,24 @@ cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>premiè
 {cta_band()}'''
 page("cabinet.html","Le cabinet KAIRN · Courtiers à Lorient","KAIRN, cabinet de courtage en financement fondé par Brendan Le Roux à Lorient : 9 experts, 15 ans d'expérience, une méthode en 4 étapes. Recrutement ouvert.",cab)
 
+# ---------- PARTENAIRES ----------
+def logos(items):
+    out=[]
+    for nom,f in items:
+        inner = f'<img src="partenaires/{f}.png" alt="{nom}" loading="lazy">' if f else f'<span class="logo-txt">{nom}</span>'
+        out.append(f'<figure class="logo-tile">{inner}<figcaption>{nom}</figcaption></figure>')
+    return '<div class="logos">'+"".join(out)+'</div>'
+banques=[("La Banque Postale","lbp"),("Caisse d'Épargne Bretagne Pays de Loire","cebpl"),("Crédit Coopératif","ccoop"),("CCF","ccf"),("Société Générale","sg"),("BNP Paribas","bnp"),("CIC","cic"),("Crédit Agricole du Morbihan","ca"),("Banque Populaire Grand Ouest","bpgo"),("Crédit Mutuel de Bretagne","cmb"),("LCL",None)]
+part = page_hero("Nos partenaires","Nos partenaires","Un réseau solide <span class='u'>à votre service</span>","Banques, notaires, spécialistes de l'assurance de prêt : nous travaillons main dans la main avec les acteurs qui comptent dans votre projet.") + f'''
+<section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">Banques</span><h2>Les banques avec lesquelles nous travaillons</h2><p class="lead">Pour chaque dossier, nous consultons plusieurs établissements en même temps et vous présentons l'offre la plus adaptée, pas celle d'une seule banque.</p></div>{logos(banques)}</div></section>
+<section class="section white"><div class="wrap split">
+<div><div class="section-head"><span class="eyebrow">Notaires</span><h2>Les notaires, à chaque étape</h2><p class="lead">De la promesse de vente à la signature de l'acte, nous coordonnons votre financement avec votre notaire pour que les fonds soient prêts le jour J.</p></div>{logos([("Notaires de France","notaires"),("Notaire &amp; Breton","notaire-breton")])}</div>
+<div><div class="section-head"><span class="eyebrow">Assurance de prêt</span><h2>Assurance emprunteur</h2><p class="lead">Pour trouver la meilleure couverture au meilleur prix, nous passons par des intermédiaires spécialisés de l'assurance de prêt.</p></div>{logos([("Assurea","assurea"),("Digital Insure","digital-insure")])}</div>
+</div></section>
+<section class="section" style="padding-block:28px 0"><div class="wrap"><p class="fine">Liste non exhaustive. Les marques et logos cités appartiennent à leurs propriétaires respectifs. KAIRN est un courtier indépendant : aucun de ces établissements ne détient de participation dans le cabinet.</p></div></section>
+{cta_band()}'''
+page("partenaires.html","Nos partenaires · Banques, notaires et assureurs · KAIRN","Les banques, notaires et spécialistes de l'assurance de prêt avec lesquels KAIRN, courtier à Lorient, travaille pour financer votre projet.",part)
+
 # ---------- CONTACT ----------
 opts = [("immo","Crédit immobilier"),("pro","Prêt professionnel"),("rachat","Regroupement de crédits"),("hypo","Prêt hypothécaire"),("assurance","Assurance de prêt"),("seniors","Viager hypothécaire ou réméré"),("autre","Autre demande")]
 oh = "".join(f'<option data-key="{k}" value="{l}">{l}</option>' for k,l in opts)

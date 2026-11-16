@@ -72,13 +72,27 @@ home = f'''
 page("index.html","KAIRN · Courtier en financement à Lorient","KAIRN, courtier en financement à Lorient : prêt immobilier, prêt professionnel, regroupement de crédits, prêt hypothécaire, assurance de prêt. Étude gratuite, réponse sous 24 h.",home)
 
 # ---------- MÉTIERS ----------
+# Guides liés à chaque page métier (maillage interne)
+GUIDES_METIER = {
+ "credit-immobilier.html":[("guide-premier-achat.html","Premier achat immobilier : les étapes du financement"),("guide-capacite-emprunt-35.html","Capacité d'emprunt : comment la banque fait le calcul"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
+ "pret-professionnel.html":[("guide-pret-professionnel.html","Prêt professionnel : comment convaincre sa banque")],
+ "rachat-de-credits.html":[("guide-regroupement-credits.html","Regroupement de crédits : quand est-ce une bonne idée ?"),("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
+ "pret-hypothecaire.html":[("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-pret-viager-hypothecaire.html","Prêt viager hypothécaire : emprunter sans mensualité grâce à son logement"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?")],
+ "assurance-emprunteur.html":[("guide-assurance-pret-loi-lemoine.html","Changer d'assurance de prêt : ce que la loi Lemoine permet"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
+}
+def guides_metier(fname):
+    g = GUIDES_METIER.get(fname)
+    if not g: return ""
+    cards = "".join(f'<a class="card" href="{h}"><span class="tag">Guide</span><h3>{t}</h3><span class="more">Lire le guide {I["arrow"]}</span></a>' for h,t in g)
+    return f'''<section class="section white"><div class="wrap"><div class="section-head"><span class="eyebrow">Pour aller plus loin</span><h2>Nos guides</h2></div><div class="cards">{cards}</div></div></section>'''
+
 def metier(fname, crumb, eyebrow, title, lead, seo, intro_h, intro_p, situations, sim_title, sim_html, faqs, extra=""):
     body = page_hero(crumb, eyebrow, title, lead) + f'''
 <section class="section"><div class="wrap split">
 <div class="prose"><span class="eyebrow">{eyebrow}</span><h2 style="color:var(--text)">{intro_h}</h2>{intro_p}</div>
 <div class="panel">{ticks(situations)}</div></div></section>
 <section class="section white"><div class="wrap"><div class="section-head"><span class="eyebrow">Simulateur</span><h2>{sim_title}</h2></div>{sim_html}</div></section>
-{extra}
+{extra}{guides_metier(fname)}
 <section class="section"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions</h2></div>{faq(faqs)}</div></section>
 {cta_band()}'''
     page(fname, seo[0], seo[1], body)

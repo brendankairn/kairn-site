@@ -250,7 +250,7 @@ ml = page_hero("Mentions légales","Informations légales","Mentions légales","
 <section><h2>Hébergement</h2><p>OVH SAS, 2 rue Kellermann, 59100 Roubaix, France.</p></section>
 <section id="confidentialite"><h2>Données personnelles</h2><p>Les informations transmises via nos formulaires (nom, coordonnées, projet) sont utilisées uniquement pour étudier votre demande et vous recontacter. Elles sont destinées aux équipes de KAIRN et, avec votre accord, aux établissements sollicités pour votre financement. Elles sont conservées 3 ans après le dernier contact, puis supprimées.</p>
 <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité. Pour l'exercer : {MAIL}. Vous pouvez aussi saisir la CNIL (www.cnil.fr).</p>
-<p>Ce site n'utilise pas de cookies publicitaires.</p></section>
+<p>Ce site n'utilise pas de cookies publicitaires.</p><h3>Mesure d'audience</h3><p>Pour connaître la fréquentation du site, nous utilisons Plausible Analytics, un outil hébergé dans l'Union européenne qui ne dépose aucun cookie et ne collecte aucune donnée personnelle : les statistiques sont anonymes et agrégées (pages vues, provenance, type d'appareil). Aucune donnée n'est revendue ni utilisée à des fins publicitaires.</p></section>
 <section><h2>Propriété intellectuelle</h2><p>Le nom KAIRN, le logo et l'ensemble des contenus de ce site sont la propriété de BMB Financement. Toute reproduction sans autorisation est interdite.</p></section>
 <section><h2>Simulateurs</h2><p>Les résultats des simulateurs sont indicatifs et ne constituent ni une offre de prêt ni un engagement. Seule l'étude de votre dossier par un établissement prêteur permet de déterminer les conditions définitives.</p></section>
 </div></section>'''

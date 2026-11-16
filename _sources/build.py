@@ -237,6 +237,10 @@ def local_schema(fname, z):
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kairn-finance.com/"},{"@type":"ListItem","position":2,"name":"Courtier "+z["court"],"item":"https://kairn-finance.com/"+fname}]}]}
     return '<script type="application/ld+json">'+json.dumps(d,ensure_ascii=False)+'</script>'
 
+PLAUSIBLE = """
+<script async src="https://plausible.io/js/pa-kT_0ZrYVv4dmbmY-3S5dY.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>"""
+
 def page(fname, title, desc, body, active=None, local=None, extra_head=""):
     head = f'''<title>{title}</title>
 <meta name="description" content="{desc}">
@@ -246,7 +250,7 @@ def page(fname, title, desc, body, active=None, local=None, extra_head=""):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css">{schema() if fname=="index.html" else ""}{local_schema(fname, local) if local else ""}{extra_head}'''
+<link rel="stylesheet" href="style.css">{PLAUSIBLE if MODE=="site" else ""}{schema() if fname=="index.html" else ""}{local_schema(fname, local) if local else ""}{extra_head}'''
     content = f'{header(active or fname)}<main>{body}</main>{footer()}{'<script>window.KAIRN_FORM_ENDPOINT="envoi.php";</script>' if MODE=='site' else ''}<script src="main.js"></script>'
     if MODE=="artifact" and fname=="index.html":
         html = head + "\n" + content

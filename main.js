@@ -76,13 +76,22 @@
     });});
   });
 
+  /* Statistiques Plausible (sans cookies) */
+  function track(ev,props){try{if(window.plausible)window.plausible(ev,{props:props});}catch(e){}}
+  document.addEventListener("click",function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="tel:"]');
+    if(a)track("Appel",{page:location.pathname});
+  });
   /* Envoi des formulaires */
   function send(form,extra){
     var data=new FormData(form);
     if(extra)Object.keys(extra).forEach(function(k){data.append(k,extra[k]);});
     if(data.get("site_web"))return Promise.resolve(true); // piège à robots
     if(!FORM_ENDPOINT)return Promise.resolve(true);
-    return fetch(FORM_ENDPOINT,{method:"POST",body:data}).then(function(r){return r.ok;}).catch(function(){return false;});
+    var nom=data.get("formulaire")||"Formulaire";
+    return fetch(FORM_ENDPOINT,{method:"POST",body:data}).then(function(r){
+      if(r.ok)track(/Candidature/.test(nom)?"Candidature":"Demande",{formulaire:nom});
+      return r.ok;}).catch(function(){return false;});
   }
   function valid(form){
     var ok=true;form.querySelectorAll("[required]").forEach(function(el){

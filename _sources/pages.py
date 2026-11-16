@@ -83,15 +83,15 @@ GUIDES_METIER = {
 AVIS = {
  "alexandre-l": ("Disponible, réactif et toujours de très bon conseil, il a parfaitement analysé notre dossier et nous a trouvé la meilleure offre pour l'achat de notre résidence principale.","Alexandre L.","Résidence principale · 2026"),
  "manon-t": ("Un gain de temps, le stress et toute la partie négociation avec les banquiers en moins […] alors faites appel à Kairn sans hésiter.","Manon T.","Projet immobilier · 2026"),
- "edwin-l": ("Merci infiniment a Valérie qui nous a sortie plusieurs offres avec un dossier compliqué […] nous avons enfin notre maison.","Edwin L.","Dossier complexe · 2026"),
- "mathieu-c": ("C'est notre 3ème projet avec eux, en perso et en pro, et c'est une réussite à chaque fois. Grace au talent de Valérie Le Barber, notre entreprise va pouvoir s'installer dans un local sur mesure en 2027!","Mathieu C.","Prêt professionnel · 2026"),
- "mathilde-f": ("A su négocier le meilleur taux possible avec les banques pour l achat de mon cabinet d orthophonie.","Mathilde F.","Prêt professionnel · 2026"),
+ "edwin-l": ("Merci infiniment à Valérie qui nous a sorti plusieurs offres avec un dossier compliqué […] nous avons enfin notre maison.","Edwin L.","Dossier complexe · 2026"),
+ "mathieu-c": ("C'est notre 3ème projet avec eux, en perso et en pro, et c'est une réussite à chaque fois. Grâce au talent de Valérie Le Barber, notre entreprise va pouvoir s'installer dans un local sur mesure en 2027 !","Mathieu C.","Prêt professionnel · 2026"),
+ "mathilde-f": ("A su négocier le meilleur taux possible avec les banques pour l'achat de mon cabinet d'orthophonie.","Mathilde F.","Prêt professionnel · 2026"),
  "lea": ("Un grand merci à toute l'équipe, et particulièrement à Valérie Le Barber et Aurélie Thouvard […] Notre projet était complexe.","Léa","Projet pro et perso · 2026"),
  "alexandre-n": ("Il a tout de suite compris notre situation et notre projet, surtout après les mauvais conseils que nous avions reçus de notre banque.","Alexandre N.","Projet immobilier · 2026"),
- "samuel-r": ("Merci pour le suivi de notre dossier de A à Z , de votre écoute à chaque moment ( même lors de nos doutes).","Samuel R.","Projet immobilier · 2026"),
+ "samuel-r": ("Merci pour le suivi de notre dossier de A à Z, de votre écoute à chaque moment (même lors de nos doutes).","Samuel R.","Projet immobilier · 2026"),
  "ludo-b": ("Deuxième financement obtenu avec de très bons taux. […] Ils vous accompagnent jusqu'à la signature du bien en s'assurant du bon déblocage des fonds pour l'acte de vente.","Ludo B.","Deuxième financement"),
  "kilian-l": ("Grâce à son professionnalisme, sa disponibilité et son écoute, notre projet a pu se concrétiser dans les meilleures conditions.","Kilian L.","Projet immobilier · 2026"),
- "nathan-l": ("Brendan à répondu à toutes mes questions, à su se montrer patient et à l'écoute.","Nathan L.","Achat d'un appartement"),
+ "nathan-l": ("Brendan a répondu à toutes mes questions, a su se montrer patient et à l'écoute.","Nathan L.","Achat d'un appartement"),
  "jade-p": ("Son professionnalisme, sa rapidité et son suivi tout au long de mon dossier mais aussi sa bienveillance à toute épreuve !","Jade P.","Projet immobilier · 2026"),
 }
 AVIS_METIER = {

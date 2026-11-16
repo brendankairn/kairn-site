@@ -264,6 +264,144 @@ dict(
         ("Faut-il voir sa banque avant un courtier ?","Vous pouvez faire les deux. Un courtier compare plusieurs banques, dont la vôtre si elle est bien placée."),
         ("Peut-on acheter seul ?","Bien sûr. Le budget est calculé sur vos seuls revenus, et la banque regardera de près votre reste à vivre.")]
 ),
+dict(
+  f="guide-rachat-pret-immobilier.html",
+  date="2026-11-16",
+  court="Rachat de prêt immobilier",
+  tag="Refinancement",
+  seo=("Rachat de prêt immobilier ou renégociation : comment décider | KAIRN",
+       "Renégocier avec sa banque ou faire racheter son prêt ailleurs : indemnités, frais, garantie, assurance et calcul du gain réel. Le guide KAIRN, courtier en refinancement."),
+  h1="Rachat de prêt immobilier : comment savoir si ça vaut le coup",
+  chapo="Votre prêt a quelques années, les conditions ont changé, et vous vous demandez s'il est possible de payer moins. Il existe deux voies : renégocier avec votre banque, ou faire racheter le prêt par une autre. Voici comment les comparer.",
+  minutes=6,
+  points=[("Deux options","Renégocier chez vous, ou faire racheter ailleurs."),
+          ("Des frais plafonnés","Indemnités limitées par la loi."),
+          ("Un seul critère","Le gain net, frais compris.")],
+  body='''
+<h2 id="options">Renégociation ou rachat : la différence</h2>
+<p>La <strong>renégociation</strong> se fait avec votre banque actuelle. Elle accepte de baisser le taux de votre prêt en cours, par un simple avenant. Pas de nouvelle garantie, peu de frais, mais la banque n'a aucune obligation de dire oui, et elle propose rarement ses meilleures conditions à un client qui ne part pas.</p>
+<p>Le <strong>rachat</strong>, ou refinancement, consiste à souscrire un nouveau prêt dans une autre banque. Ce prêt rembourse l'ancien par anticipation. C'est plus de démarches, mais c'est souvent là que se trouvent les meilleures conditions, et la concurrence fait parfois bouger votre propre banque.</p>
+
+<h2 id="frais">Les frais à mettre en face</h2>
+<ul class="guide-list">
+<li><b>Les indemnités de remboursement anticipé.</b> Elles sont plafonnées par la loi : 6 mois d'intérêts, dans la limite de 3 % du capital restant dû. Certains contrats les suppriment, relisez votre offre de prêt.</li>
+<li><b>La nouvelle garantie.</b> Une nouvelle caution ou une nouvelle hypothèque. Si votre ancien prêt était cautionné, une partie de la participation versée à l'organisme de caution vous est souvent restituée.</li>
+<li><b>La mainlevée.</b> Si l'ancien prêt était garanti par une hypothèque, il faut la lever chez le notaire.</li>
+<li><b>Les frais de dossier</b> de la nouvelle banque, qui se négocient.</li>
+</ul>
+<p>Des indemnités ne sont pas dues dans certains cas prévus par la loi, par exemple quand vous vendez votre bien à la suite d'une mutation professionnelle.</p>
+
+<h2 id="calcul">Le seul bon calcul : le gain net</h2>
+<p>On entend souvent qu'un rachat n'est intéressant qu'au-delà d'un certain écart de taux. Cette règle est trop simple. Ce qui compte, c'est la différence entre ce que vous paieriez jusqu'à la fin avec votre prêt actuel et ce que vous paierez avec le nouveau, <strong>tous frais compris</strong>.</p>
+<p>Trois choses font varier le résultat : le capital restant dû, la durée restante et le moment où vous en êtes. Dans un prêt, les intérêts pèsent surtout les premières années. Un rachat a donc en général plus d'effet dans la première moitié du prêt.</p>
+
+<h2 id="assurance">Ne pas oublier l'assurance</h2>
+<p>Le coût de l'assurance emprunteur compte autant que le taux. Un rachat est l'occasion de choisir un contrat individuel moins cher, à garanties équivalentes. Et si seul le taux de l'assurance vous gêne, vous pouvez la changer seule, à tout moment, grâce à la loi Lemoine. Voir notre <a href="guide-assurance-pret-loi-lemoine.html">guide de l'assurance de prêt</a>.</p>
+
+<h2 id="autres">Ce que le rachat permet aussi</h2>
+<p>Le rachat peut servir à autre chose qu'à baisser le taux : réduire la mensualité en allongeant la durée, au contraire raccourcir le prêt, ajouter une enveloppe pour des travaux, ou regrouper d'autres crédits. Chaque scénario se chiffre, avec son coût total. Pour le regroupement, voir notre <a href="guide-regroupement-credits.html">guide dédié</a>.</p>
+
+<h2 id="regles">Les règles à connaître</h2>
+<p>Le nouveau prêt est un crédit immobilier comme un autre : la banque vous remet une offre écrite, et vous disposez d'un <strong>délai de réflexion de 10 jours</strong> avant de l'accepter. Il doit aussi respecter les règles d'endettement en vigueur, dont le plafond de 35 % de vos revenus, assurance comprise.</p>
+
+<h2 id="methode">Notre méthode</h2>
+<p>Nous reprenons votre offre de prêt et votre tableau d'amortissement, puis nous calculons le gain net de plusieurs scénarios : renégociation, rachat, changement d'assurance seul. Si l'opération ne vous fait pas gagner d'argent, nous vous le disons.</p>
+''',
+  sim="sim_capacite", sim_titre="Calculez votre capacité d'emprunt",
+  lien=("credit-immobilier.html","Notre service prêt immobilier"),
+  faqs=[("Ma banque peut-elle refuser de renégocier ?","Oui. La renégociation est une négociation commerciale, pas un droit. Une offre de rachat d'une autre banque est souvent le meilleur argument."),
+        ("Peut-on faire racheter un prêt à taux zéro ?","Le prêt à taux zéro n'a pas d'intérêt à racheter. On le garde en général, et seul le prêt principal est refinancé."),
+        ("Combien de temps prend un rachat ?","Comptez en général un à deux mois entre la constitution du dossier et le remboursement de l'ancien prêt, délai de réflexion de 10 jours compris.")]
+),
+dict(
+  f="guide-pret-viager-hypothecaire.html",
+  date="2026-11-16",
+  court="Prêt viager hypothécaire",
+  tag="Prêt hypothécaire",
+  seo=("Prêt viager hypothécaire : fonctionnement, coût et alternatives | KAIRN",
+       "Emprunter sans mensualité grâce à son logement, après 60 ou 70 ans : principe, remboursement à la succession, protection des héritiers et alternatives. Le guide KAIRN."),
+  h1="Prêt viager hypothécaire : emprunter sans mensualité grâce à son logement",
+  chapo="Vous êtes propriétaire, à la retraite, et vous avez besoin de liquidités sans alourdir votre budget mensuel. Le prêt viager hypothécaire répond à ce besoin. C'est une solution utile, mais engageante : voici ce qu'il faut savoir.",
+  minutes=6,
+  points=[("Aucune mensualité","Le prêt est remboursé à la vente du bien ou à la succession."),
+          ("Vous restez chez vous","Vous gardez la propriété et l'usage de votre logement."),
+          ("Dette plafonnée","Elle ne peut pas dépasser la valeur du bien.")],
+  body='''
+<h2 id="principe">Le principe</h2>
+<p>Le prêt viager hypothécaire est prévu par le Code de la consommation. Un établissement vous prête une somme, versée en une fois ou en plusieurs, garantie par une hypothèque sur un bien immobilier à usage d'habitation dont vous êtes propriétaire.</p>
+<p>Vous ne remboursez rien de votre vivant, ni capital ni intérêts. Le prêt est remboursé <strong>au décès</strong>, ou plus tôt si vous vendez le bien. Vous restez propriétaire et vous continuez à y vivre.</p>
+
+<h2 id="pour-qui">Pour qui ?</h2>
+<p>Cette formule s'adresse aux propriétaires âgés, en général à partir de 65 ou 70 ans selon les établissements, dont les revenus ne permettent pas de rembourser un crédit classique. Elle peut financer des travaux d'adaptation du logement, compléter une retraite, aider un enfant ou faire face à une dépense importante.</p>
+
+<h2 id="montant">Combien peut-on obtenir ?</h2>
+<p>Le montant dépend de la valeur du bien et de votre âge : plus vous êtes âgé, plus la part de la valeur prêtée est importante. Elle reste nettement inférieure à la valeur du bien, car les intérêts s'ajoutent au capital pendant toute la durée du prêt.</p>
+
+<h2 id="cout">Ce que ça coûte</h2>
+<p>Les intérêts ne sont pas payés au fil de l'eau : ils sont capitalisés, c'est-à-dire ajoutés chaque année à la dette. Sur une longue durée, la somme à rembourser peut donc représenter beaucoup plus que le montant emprunté. Il faut aussi compter les frais de l'acte notarié et de l'hypothèque, ainsi que l'expertise du bien.</p>
+
+<h2 id="heritiers">Et pour les héritiers ?</h2>
+<p>La loi apporte une protection importante : la dette ne peut jamais dépasser la valeur du bien au moment du remboursement. Si le bien vaut moins que la somme due, les héritiers ne paient pas la différence.</p>
+<p>Au décès, les héritiers peuvent rembourser la dette et garder le bien, ou le vendre et rembourser le prêteur avec le prix de vente. Ce qui reste leur revient. C'est une décision qui se prépare en famille : nous recommandons d'en parler avec eux et avec votre notaire avant de signer.</p>
+
+<h2 id="obligations">Vos engagements</h2>
+<p>Vous devez entretenir le bien et l'assurer. Le contrat peut prévoir que le prêt devient exigible si le bien est mal entretenu, loué ou vendu sans accord. Comme pour tout crédit immobilier, l'offre est écrite et vous disposez d'un <strong>délai de réflexion de 10 jours</strong> avant de l'accepter.</p>
+
+<h2 id="alternatives">Les alternatives à comparer</h2>
+<ul class="guide-list">
+<li><b>Le prêt hypothécaire classique</b>, avec des mensualités, si vos revenus le permettent. Il coûte souvent moins cher. Voir notre <a href="guide-pret-hypothecaire.html">guide du prêt hypothécaire</a>.</li>
+<li><b>Le prêt avance mutation</b>, qui permet de ne payer que les intérêts, ou rien, jusqu'à la vente du bien.</li>
+<li><b>La vente en viager</b> ou la vente de la nue-propriété : vous n'êtes plus propriétaire, mais vous percevez un capital et vous gardez l'usage du logement.</li>
+</ul>
+<p>Peu d'établissements proposent le prêt viager hypothécaire. Notre rôle est de savoir qui le fait, à quelles conditions, et de vous dire honnêtement si une autre solution vous convient mieux.</p>
+''',
+  sim="sim_hypo", sim_titre="Estimez ce que votre bien peut mobiliser",
+  lien=("pret-hypothecaire.html","Notre service prêt hypothécaire"),
+  faqs=[("Faut-il un bilan de santé ?","Non. Il n'y a pas d'assurance décès sur ce prêt, puisqu'il est justement remboursé au décès."),
+        ("Le bien doit-il être libre de tout crédit ?","Pas forcément, mais le prêt viager sert d'abord à rembourser ce qui reste dû sur le bien. Le reste vous est versé."),
+        ("Peut-on rembourser par anticipation ?","Oui. Vous ou vos héritiers pouvez rembourser à tout moment. Les conditions sont précisées dans l'offre.")]
+),
+dict(
+  f="guide-garantie-pret-hypotheque-caution.html",
+  date="2026-11-16",
+  court="Hypothèque ou caution",
+  tag="Prêt immobilier",
+  seo=("Hypothèque ou caution : quelle garantie pour votre prêt ? | KAIRN",
+       "Caution, hypothèque conventionnelle, hypothèque légale du prêteur de deniers (ex-PPD) : fonctionnement, coûts, mainlevée et restitution. Le guide KAIRN."),
+  h1="Hypothèque ou caution : quelle garantie pour votre prêt ?",
+  chapo="Toute banque demande une garantie pour un prêt immobilier. Selon le choix fait, les frais au départ et à la revente ne sont pas les mêmes. Voici les trois options, et ce qu'elles changent pour vous.",
+  minutes=5,
+  points=[("La caution","Un organisme se porte garant de vous."),
+          ("L'hypothèque","Votre bien sert de garantie, chez le notaire."),
+          ("À la revente","Mainlevée d'un côté, restitution partielle de l'autre.")],
+  body='''
+<h2 id="pourquoi">Pourquoi une garantie ?</h2>
+<p>La garantie protège la banque si le prêt n'est plus remboursé. Elle ne remplace pas l'assurance emprunteur, qui couvre le décès, l'invalidité ou l'arrêt de travail. Les deux sont presque toujours demandées.</p>
+
+<h2 id="caution">La caution d'un organisme spécialisé</h2>
+<p>Un organisme de caution s'engage à rembourser la banque si vous ne le faites plus, puis se retourne contre vous. C'est la solution la plus courante pour une résidence principale.</p>
+<p>Vous versez une commission et une participation à un fonds mutuel. À la fin du prêt, ou si vous le remboursez par anticipation, <strong>une partie de cette participation vous est en général restituée</strong>. Pas de passage supplémentaire chez le notaire, et rien à faire à la revente.</p>
+<p>L'organisme étudie lui aussi votre dossier et peut refuser. Dans ce cas, la banque se tourne vers l'hypothèque.</p>
+
+<h2 id="hypotheque">L'hypothèque conventionnelle</h2>
+<p>Le bien financé, ou un autre bien que vous possédez, est apporté en garantie par un acte notarié. En cas d'impayés, la banque peut faire vendre le bien. Elle permet aussi de financer des biens ou des profils que les organismes de caution n'acceptent pas : construction, terrain, investissement, <a href="guide-pret-hypothecaire.html">prêt hypothécaire</a>.</p>
+<p>Elle coûte des frais de notaire, une taxe de publicité foncière et la contribution de sécurité immobilière. L'inscription prend fin un an après la dernière échéance.</p>
+
+<h2 id="pdd">L'hypothèque légale du prêteur de deniers</h2>
+<p>C'est le nouveau nom, depuis la réforme des sûretés entrée en vigueur en 2023, de l'ancien <strong>privilège de prêteur de deniers</strong> (PPD). Elle fonctionne comme une hypothèque, mais ne peut garantir que l'achat d'un bien <strong>existant</strong> : elle ne couvre pas la construction ni les travaux. Son avantage : elle échappe à la taxe de publicité foncière, ce qui la rend moins chère qu'une hypothèque classique.</p>
+
+<h2 id="revente">Ce qui se passe si vous vendez avant la fin</h2>
+<p>Avec une hypothèque, le notaire doit demander une <strong>mainlevée</strong> pour lever la garantie, ce qui a un coût, prélevé sur le prix de vente. Avec une caution, rien de tel, et vous récupérez une partie de la participation versée au départ. C'est un point à regarder si vous pensez revendre dans quelques années.</p>
+
+<h2 id="choix">Qui choisit ?</h2>
+<p>C'est la banque qui accepte ou non une garantie, mais elle en propose souvent plusieurs. Le choix se négocie avec le reste de l'offre. Nous comparons le coût total de chaque option selon votre projet et la durée pendant laquelle vous comptez garder le bien.</p>
+''',
+  sim="sim_capacite", sim_titre="Calculez votre capacité d'emprunt",
+  lien=("credit-immobilier.html","Notre service prêt immobilier"),
+  faqs=[("La caution, c'est un proche qui se porte garant ?","Non, pas pour un prêt immobilier classique. Il s'agit d'un organisme spécialisé. La caution d'un proche existe, mais elle est rarement acceptée seule par les banques."),
+        ("L'hypothèque m'empêche-t-elle de vendre ?","Non. Vous pouvez vendre à tout moment. Le prêt est remboursé avec le prix de vente et le notaire organise la mainlevée."),
+        ("Quelle garantie coûte le moins cher ?","Cela dépend du montant, de la nature du bien et de la durée de détention. Une caution peut coûter plus au départ mais rendre une partie à la fin. Il faut chiffrer les deux.")]
+),
 ]
 
 GUIDES_HUB = "guides.html"
@@ -273,7 +411,7 @@ def guide_cards(exclude=None):
 
 def guide_schema(g):
     d={"@context":"https://schema.org","@graph":[
-      {"@type":"Article","headline":g["h1"],"description":g["seo"][1],"datePublished":GUIDE_DATE,"dateModified":GUIDE_DATE,"inLanguage":"fr-FR",
+      {"@type":"Article","headline":g["h1"],"description":g["seo"][1],"datePublished":g.get("date",GUIDE_DATE),"dateModified":g.get("date",GUIDE_DATE),"inLanguage":"fr-FR",
        "mainEntityOfPage":"https://kairn-finance.com/"+g["f"],
        "author":{"@type":"Organization","name":"KAIRN","url":"https://kairn-finance.com/"},
        "publisher":{"@type":"Organization","name":"KAIRN","url":"https://kairn-finance.com/","logo":{"@type":"ImageObject","url":"https://kairn-finance.com/favicon.svg"}}},
@@ -284,6 +422,9 @@ def guide_schema(g):
     return '<script type="application/ld+json">'+_json.dumps(d,ensure_ascii=False)+'</script>'
 
 import re as _re
+_MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]
+def _date_fr(d):
+    y,m,j=d.split("-"); return f"{int(j)} {_MOIS[int(m)-1]} {y}"
 for g in GUIDES:
     toc = "".join('<li><a href="#%s">%s</a></li>' % (a, _re.sub(r"^\d+\. ", "", t)) for a,t in _re.findall(r'<h2 id="([^"]+)">([^<]+)</h2>', g["body"]))
     pts = "".join(f'<div><b>{b}</b><span>{s}</span></div>' for b,s in g["points"])
@@ -291,7 +432,7 @@ for g in GUIDES:
     body = f'''
 <section class="dark page-hero guide-hero">{HEXWM}<div class="wrap"><p class="crumbs"><a href="index.html">Accueil</a> / <a href="{GUIDES_HUB}">Guides</a> / {g["court"]}</p>
 <span class="eyebrow">Guide · {g["tag"]}</span><h1 style="margin-top:14px;max-width:24ch">{g["h1"]}</h1><p class="lead" style="margin-top:18px">{g["chapo"]}</p>
-<p class="guide-meta">Par l'équipe KAIRN · mis à jour le 14 novembre 2026 · {g["minutes"]} min de lecture</p></div></section>
+<p class="guide-meta">Par l'équipe KAIRN · mis à jour le {_date_fr(g.get("date",GUIDE_DATE))} · {g["minutes"]} min de lecture</p></div></section>
 <section class="section white"><div class="wrap guide-grid">
 <article class="guide-body"><div class="guide-points">{pts}</div>{g["body"]}</article>
 <aside class="guide-aside"><nav class="panel guide-toc" aria-label="Sommaire"><h3>Sommaire</h3><ol>{toc}</ol></nav>
@@ -312,4 +453,4 @@ _hub = f'''
 <section class="section"><div class="wrap"><div class="cards">{guide_cards()}</div></div></section>
 {cta_band()}'''
 page(GUIDES_HUB, "Guides du financement : prêt immobilier, assurance, hypothécaire | KAIRN",
-     "Les guides pratiques de KAIRN, courtier à Lorient : capacité d'emprunt, assurance de prêt et loi Lemoine, prêt hypothécaire. Des réponses claires, sans jargon.", _hub, active=GUIDES_HUB)
+     "Les guides pratiques de KAIRN, courtier à Lorient : capacité d'emprunt, assurance de prêt, prêt hypothécaire et viager, rachat de prêt, garanties. Des réponses claires, sans jargon.", _hub, active=GUIDES_HUB)

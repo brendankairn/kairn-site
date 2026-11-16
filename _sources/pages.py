@@ -80,6 +80,37 @@ GUIDES_METIER = {
  "pret-hypothecaire.html":[("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-pret-viager-hypothecaire.html","Prêt viager hypothécaire : emprunter sans mensualité grâce à son logement"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?")],
  "assurance-emprunteur.html":[("guide-assurance-pret-loi-lemoine.html","Changer d'assurance de prêt : ce que la loi Lemoine permet"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
 }
+AVIS = {
+ "alexandre-l": ("Disponible, réactif et toujours de très bon conseil, il a parfaitement analysé notre dossier et nous a trouvé la meilleure offre pour l'achat de notre résidence principale.","Alexandre L.","Résidence principale · 2026"),
+ "manon-t": ("Un gain de temps, le stress et toute la partie négociation avec les banquiers en moins […] alors faites appel à Kairn sans hésiter.","Manon T.","Projet immobilier · 2026"),
+ "edwin-l": ("Merci infiniment à Valérie qui nous a sorti plusieurs offres avec un dossier compliqué […] nous avons enfin notre maison.","Edwin L.","Dossier complexe · 2026"),
+ "mathieu-c": ("C'est notre 3ème projet avec eux, en perso et en pro, et c'est une réussite à chaque fois. Grâce au talent de Valérie Le Barber, notre entreprise va pouvoir s'installer dans un local sur mesure en 2027 !","Mathieu C.","Prêt professionnel · 2026"),
+ "mathilde-f": ("A su négocier le meilleur taux possible avec les banques pour l'achat de mon cabinet d'orthophonie.","Mathilde F.","Prêt professionnel · 2026"),
+ "lea": ("Un grand merci à toute l'équipe, et particulièrement à Valérie Le Barber et Aurélie Thouvard […] Notre projet était complexe.","Léa","Projet pro et perso · 2026"),
+ "alexandre-n": ("Il a tout de suite compris notre situation et notre projet, surtout après les mauvais conseils que nous avions reçus de notre banque.","Alexandre N.","Projet immobilier · 2026"),
+ "samuel-r": ("Merci pour le suivi de notre dossier de A à Z, de votre écoute à chaque moment (même lors de nos doutes).","Samuel R.","Projet immobilier · 2026"),
+ "ludo-b": ("Deuxième financement obtenu avec de très bons taux. […] Ils vous accompagnent jusqu'à la signature du bien en s'assurant du bon déblocage des fonds pour l'acte de vente.","Ludo B.","Deuxième financement"),
+ "kilian-l": ("Grâce à son professionnalisme, sa disponibilité et son écoute, notre projet a pu se concrétiser dans les meilleures conditions.","Kilian L.","Projet immobilier · 2026"),
+ "nathan-l": ("Brendan a répondu à toutes mes questions, a su se montrer patient et à l'écoute.","Nathan L.","Achat d'un appartement"),
+ "jade-p": ("Son professionnalisme, sa rapidité et son suivi tout au long de mon dossier mais aussi sa bienveillance à toute épreuve !","Jade P.","Projet immobilier · 2026"),
+}
+AVIS_METIER = {
+ "credit-immobilier.html": ["alexandre-l","edwin-l","manon-t"],
+ "pret-professionnel.html": ["mathieu-c","mathilde-f","lea"],
+ "rachat-de-credits.html": ["alexandre-n","samuel-r","ludo-b"],
+ "pret-hypothecaire.html": ["nathan-l","kilian-l","edwin-l"],
+ "assurance-emprunteur.html": ["manon-t","jade-p","alexandre-n"],
+}
+
+def avis_metier(fname):
+    keys = AVIS_METIER.get(fname)
+    if not keys: return ""
+    arts = "".join(f'<article class="review"><div class="stars" aria-label="5 étoiles sur 5">★★★★★</div><p>« {AVIS[k][0]} »</p><footer><b>{AVIS[k][1]}</b>{AVIS[k][2]} · Avis Google</footer></article>' for k in keys)
+    return f'''<section class="section"><div class="wrap">
+<div class="section-head" style="max-width:none;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px"><div style="display:grid;gap:14px"><span class="eyebrow">Avis clients</span><h2>Ils nous ont fait confiance</h2></div>
+<a class="rating" href="https://www.google.com/maps/search/?api=1&query=KAIRN+8+mail+Jeanne+Villepreux+Lorient" rel="noopener" style="text-decoration:none"><b>5,0</b><div><div class="stars">★★★★★</div><span style="color:var(--muted);font-size:.85rem">204 avis Google · voir tous les avis</span></div></a></div>
+<div class="reviews">{arts}</div></div></section>'''
+
 def guides_metier(fname):
     g = GUIDES_METIER.get(fname)
     if not g: return ""
@@ -92,7 +123,7 @@ def metier(fname, crumb, eyebrow, title, lead, seo, intro_h, intro_p, situations
 <div class="prose"><span class="eyebrow">{eyebrow}</span><h2 style="color:var(--text)">{intro_h}</h2>{intro_p}</div>
 <div class="panel">{ticks(situations)}</div></div></section>
 <section class="section white"><div class="wrap"><div class="section-head"><span class="eyebrow">Simulateur</span><h2>{sim_title}</h2></div>{sim_html}</div></section>
-{extra}{guides_metier(fname)}
+{extra}{avis_metier(fname)}{guides_metier(fname)}
 <section class="section"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions</h2></div>{faq(faqs)}</div></section>
 {cta_band()}'''
     page(fname, seo[0], seo[1], body)

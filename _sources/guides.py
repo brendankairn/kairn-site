@@ -404,6 +404,9 @@ dict(
 ),
 ]
 
+_ORDRE = ["guide-pret-hypothecaire.html","guide-pret-viager-hypothecaire.html","guide-capacite-emprunt-35.html","guide-premier-achat.html","guide-regroupement-credits.html","guide-pret-professionnel.html","guide-assurance-pret-loi-lemoine.html","guide-garantie-pret-hypotheque-caution.html","guide-rachat-pret-immobilier.html"]
+GUIDES.sort(key=lambda g: _ORDRE.index(g["f"]) if g["f"] in _ORDRE else len(_ORDRE))
+
 GUIDES_HUB = "guides.html"
 
 def guide_cards(exclude=None):

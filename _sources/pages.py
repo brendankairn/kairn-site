@@ -74,9 +74,9 @@ page("index.html","KAIRN · Courtier en financement à Lorient","KAIRN, courtier
 # ---------- MÉTIERS ----------
 # Guides liés à chaque page métier (maillage interne)
 GUIDES_METIER = {
- "credit-immobilier.html":[("guide-premier-achat.html","Premier achat immobilier : les étapes du financement"),("guide-capacite-emprunt-35.html","Capacité d'emprunt : comment la banque fait le calcul"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?")],
+ "credit-immobilier.html":[("guide-premier-achat.html","Premier achat immobilier : les étapes du financement"),("guide-capacite-emprunt-35.html","Capacité d'emprunt : comment la banque fait le calcul"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
  "pret-professionnel.html":[("guide-pret-professionnel.html","Prêt professionnel : comment convaincre sa banque")],
- "rachat-de-credits.html":[("guide-regroupement-credits.html","Regroupement de crédits : quand est-ce une bonne idée ?"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup"),("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine")],
+ "rachat-de-credits.html":[("guide-regroupement-credits.html","Regroupement de crédits : quand est-ce une bonne idée ?"),("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
  "pret-hypothecaire.html":[("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-pret-viager-hypothecaire.html","Prêt viager hypothécaire : emprunter sans mensualité grâce à son logement"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?")],
  "assurance-emprunteur.html":[("guide-assurance-pret-loi-lemoine.html","Changer d'assurance de prêt : ce que la loi Lemoine permet"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
 }

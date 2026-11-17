@@ -180,7 +180,8 @@ metier("pret-hypothecaire.html","Prêt hypothécaire","Prêt hypothécaire",
 <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
 <div class="card"><div class="ico">{I["home"]}</div><h3>Prêt viager hypothécaire</h3><p>Pour les propriétaires seniors : obtenir des liquidités sans vendre et sans mensualités, le prêt étant remboursé au moment de la vente ou de la succession.</p></div>
 <div class="card"><div class="ico">{I["key"]}</div><h3>Vente à réméré</h3><p>Vendre temporairement son bien pour se refinancer, tout en conservant le droit de le racheter dans un délai fixé, en général jusqu'à 5 ans. Une solution encadrée, à étudier avec soin.</p></div>
-</div></div></section>''')
+</div></div></section>
+<section class="section white"><div class="wrap"><div class="section-head"><span class="eyebrow">Partout en France</span><h2>Le prêt hypothécaire dans votre ville</h2><p class="lead">Nous accompagnons les propriétaires de toute la France, à distance, jusqu'à la signature chez leur notaire.</p></div><div class="chips"><a class="chip" href="pret-hypothecaire-paris.html">Paris</a><a class="chip" href="pret-hypothecaire-lyon.html">Lyon</a><a class="chip" href="pret-hypothecaire-marseille.html">Marseille</a><a class="chip" href="pret-hypothecaire-toulouse.html">Toulouse</a><a class="chip" href="pret-hypothecaire-nice.html">Nice</a><a class="chip" href="pret-hypothecaire-nantes.html">Nantes</a><a class="chip" href="pret-hypothecaire-bordeaux.html">Bordeaux</a><a class="chip" href="pret-hypothecaire-lille.html">Lille</a><a class="chip" href="pret-hypothecaire-montpellier.html">Montpellier</a><a class="chip" href="pret-hypothecaire-strasbourg.html">Strasbourg</a></div></div></section>''')
 
 metier("assurance-emprunteur.html","Assurance de prêt","Assurance de prêt",
  "Payez-vous trop pour <span class='u'>votre assurance de prêt</span> ?",

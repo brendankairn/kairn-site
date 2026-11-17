@@ -226,7 +226,7 @@ REVIEWS = '''<div class="reviews">
 </div>'''
 
 def schema():
-    return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Th 13:30-18:00","Fr 13:30-17:00"],"identifier":"ORIAS 14003265","sameAs":["https://www.facebook.com/vanetyslorient","https://www.linkedin.com/company/119024045/","https://www.instagram.com/kairn_finance/"]}</script>'''
+    return org_schema()
 
 def local_schema(fname, z):
     import json
@@ -242,6 +242,9 @@ PLAUSIBLE = """
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>"""
 
 def page(fname, title, desc, body, active=None, local=None, extra_head=""):
+    if en_bref(fname):
+        i = body.find("</section>") + len("</section>")
+        body = body[:i] + en_bref(fname) + body[i:]
     head = f'''<title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -260,6 +263,7 @@ def page(fname, title, desc, body, active=None, local=None, extra_head=""):
     html = re.sub(r' ([?!])(?=[\s<])', r'&nbsp;\1', html)
     open(os.path.join(OUT,fname),"w").write(html)
 
+exec(open(os.path.join(os.path.dirname(__file__) or ".","ia.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","locales.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","guides.py")).read())
@@ -274,4 +278,5 @@ if MODE=="site":
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")
+    open(os.path.join(OUT,"llms.txt"),"w").write(LLMS_TXT)
 shutil.copy("favicon.svg", OUT)

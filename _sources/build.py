@@ -199,7 +199,7 @@ sim_hypo = _with_lead(sim_hypo, "Prêt hypothécaire")
 sim_pro = _with_lead(sim_pro, "Prêt professionnel")
 
 def stats():
-    return '''<div class="stats"><div class="stat"><b>2 200</b><span>dossiers financés</span></div><div class="stat"><b>94 %</b><span>de taux d'accord</span></div><div class="stat"><b>+30</b><span>partenaires bancaires</span></div><div class="stat"><b>15 ans</b><span>d'expertise du courtage</span></div></div>'''
+    return '''<div class="stats"><div class="stat"><b>2 200</b><span>dossiers financés</span></div><div class="stat"><b>94 %</b><span>de taux d'accord</span></div><div class="stat"><b>+20</b><span>partenaires bancaires</span></div><div class="stat"><b>15 ans</b><span>d'expertise du courtage</span></div></div>'''
 
 def cta_band(title="Votre projet mérite une vraie étude", text="Un expert analyse votre situation et vous rappelle sous 24 h. C'est gratuit, et vous ne payez nos honoraires qu'une fois votre financement obtenu."):
     return f'''<section class="section"><div class="wrap"><div class="cta-band dark">{HEXWM}<div style="position:relative"><h2>{title}</h2><p class="lead" style="margin-top:12px">{text}</p></div>

@@ -3,7 +3,7 @@
 import json as _json
 
 FAITS = ("cabinet de courtage en crédit indépendant basé à Lorient (Morbihan), "
-         "9 experts, plus de 30 banques partenaires, noté 5,0 sur 204 avis Google, "
+         "9 experts, plus de 20 banques partenaires, noté 5,0 sur 204 avis Google, "
          "inscrit à l'ORIAS sous le n° 14003265")
 
 EN_BREF = {
@@ -11,10 +11,10 @@ EN_BREF = {
  "courtier-lorient.html": "KAIRN est un " + FAITS + ". Notre agence est au 8 mail Jeanne Villepreux-Power, à Lorient : nous vous recevons sur place ou à distance.",
  "courtier-morbihan.html": "KAIRN est un " + FAITS + ". Nous accompagnons les emprunteurs de tout le Morbihan : Lorient, Vannes, Auray, Pontivy, Hennebont, Lanester, Ploemeur, Quiberon et alentours.",
  "courtier-bretagne.html": "KAIRN est un " + FAITS + ". Nous accompagnons les emprunteurs de toute la Bretagne, de Brest à Rennes, sur place ou à distance.",
- "credit-immobilier.html": "KAIRN est un courtier en prêt immobilier basé à Lorient : 9 experts, plus de 30 banques partenaires, noté 5,0 sur 204 avis Google. Étude gratuite, réponse sous 24 h, honoraires uniquement en cas de succès.",
- "rachat-de-credits.html": "KAIRN est un courtier en regroupement de crédits basé à Lorient : nous réunissons vos crédits immobiliers et à la consommation en une seule mensualité, pour les propriétaires comme pour les locataires. 9 experts, plus de 30 banques partenaires, noté 5,0 sur 204 avis Google.",
+ "credit-immobilier.html": "KAIRN est un courtier en prêt immobilier basé à Lorient : 9 experts, plus de 20 banques partenaires, noté 5,0 sur 204 avis Google. Étude gratuite, réponse sous 24 h, honoraires uniquement en cas de succès.",
+ "rachat-de-credits.html": "KAIRN est un courtier en regroupement de crédits basé à Lorient : nous réunissons vos crédits immobiliers et à la consommation en une seule mensualité, pour les propriétaires comme pour les locataires. 9 experts, plus de 20 banques partenaires, noté 5,0 sur 204 avis Google.",
  "pret-hypothecaire.html": "KAIRN est un courtier spécialisé en prêt hypothécaire, prêt viager hypothécaire et vente à réméré, basé à Lorient et actif partout en France. C'est l'une de nos spécialités : nous montons ces dossiers, souvent écartés par les circuits classiques.",
- "pret-professionnel.html": "KAIRN est un courtier en prêt professionnel basé à Lorient : création, reprise, achat de locaux, matériel et trésorerie, pour les entreprises et les professions libérales. Plus de 30 banques partenaires, noté 5,0 sur 204 avis Google.",
+ "pret-professionnel.html": "KAIRN est un courtier en prêt professionnel basé à Lorient : création, reprise, achat de locaux, matériel et trésorerie, pour les entreprises et les professions libérales. Plus de 20 banques partenaires, noté 5,0 sur 204 avis Google.",
  "assurance-emprunteur.html": "KAIRN est un courtier en assurance de prêt basé à Lorient : nous calculons gratuitement l'économie possible sur votre assurance emprunteur et nous nous occupons du changement de contrat.",
  "guide-pret-viager-hypothecaire.html": "KAIRN, courtier basé à Lorient, accompagne les propriétaires seniors qui envisagent un prêt viager hypothécaire, partout en France : étude gratuite de votre situation et recherche de l'établissement prêteur.",
 }

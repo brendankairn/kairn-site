@@ -126,7 +126,7 @@ def metier(fname, crumb, eyebrow, title, lead, seo, intro_h, intro_p, situations
 {extra}{avis_metier(fname)}{guides_metier(fname)}
 <section class="section"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions</h2></div>{faq(faqs)}</div></section>
 {cta_band()}'''
-    page(fname, seo[0], seo[1], body)
+    page(fname, seo[0], seo[1], body, extra_head=faq_schema(faqs))
 
 metier("credit-immobilier.html","Crédit immobilier","Crédit immobilier",
  "Achetez au <span class='u'>bon prix</span>, empruntez aux bonnes conditions",

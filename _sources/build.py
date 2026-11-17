@@ -64,7 +64,7 @@ def footer():
 <div><h4>Nos secteurs</h4><ul><li><a href="courtier-lorient.html">Lorient</a></li><li><a href="courtier-pays-de-lorient.html">Pays de Lorient</a></li><li><a href="courtier-lanester.html">Lanester</a></li><li><a href="courtier-hennebont.html">Hennebont</a></li><li><a href="courtier-ploemeur.html">Ploemeur</a></li><li><a href="courtier-vannes.html">Vannes et le golfe</a></li><li><a href="courtier-auray-carnac-quiberon.html">Auray · Carnac · Quiberon</a></li><li><a href="courtier-quimperle.html">Quimperlé</a></li><li><a href="courtier-quimper.html">Quimper</a></li><li><a href="courtier-concarneau.html">Concarneau</a></li><li><a href="courtier-brest.html">Brest</a></li><li><a href="courtier-rennes.html">Rennes</a></li><li><a href="courtier-saint-malo.html">Saint-Malo</a></li><li><a href="courtier-saint-brieuc.html">Saint-Brieuc</a></li><li><a href="courtier-lannion.html">Lannion</a></li><li><a href="courtier-pontivy.html">Pontivy</a></li><li><a href="courtier-morbihan.html">Morbihan</a></li><li><a href="courtier-bretagne.html">Bretagne</a></li></ul></div>
 <div><h4>Le cabinet</h4><ul><li><a href="cabinet.html">Qui sommes-nous</a></li><li><a href="cabinet.html#methode">Notre méthode</a></li><li><a href="simulateurs.html">Simulateurs</a></li><li><a href="guides.html">Guides pratiques</a></li><li><a href="partenaires.html">Nos partenaires</a></li><li><a href="cabinet.html#recrutement">Recrutement</a></li><li><a href="contact.html">Contact</a></li></ul></div>
 <div><h4>Nous joindre</h4><ul><li><a class="num" href="tel:{TEL}">{PHONE}</a></li><li><a href="mailto:{MAIL}">{MAIL}</a></li><li>{ADDR}</li><li>Lun–jeu 9h–12h / 13h30–18h<br>Ven 9h–12h / 13h30–17h<br>Samedi sur rendez-vous</li>
-<li><a href="https://www.linkedin.com/company/119024045/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/vanetyslorient" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kairn_finance/" rel="noopener">Instagram</a></li></ul></div>
+<li><a href="https://www.linkedin.com/company/119024045/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/KairnFinance" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kairn_finance/" rel="noopener">Instagram</a></li></ul></div>
 </div>
 <div class="legal">
 <p>KAIRN est le nom commercial de BMB Financement, RCS Lorient 800 090 607. Immatriculé à l'ORIAS sous le n° 14003265 en qualité de courtier en opérations de banque et en services de paiement (COBSP), de mandataire d'intermédiaire en opérations de banque (MIOBSP) et de mandataire d'intermédiaire d'assurance (MIA), vérifiable sur <a href="https://www.orias.fr" rel="noopener">orias.fr</a>.</p>
@@ -199,7 +199,7 @@ sim_hypo = _with_lead(sim_hypo, "Prêt hypothécaire")
 sim_pro = _with_lead(sim_pro, "Prêt professionnel")
 
 def stats():
-    return '''<div class="stats"><div class="stat"><b>2 200</b><span>dossiers financés</span></div><div class="stat"><b>94 %</b><span>de taux d'accord</span></div><div class="stat"><b>+30</b><span>partenaires bancaires</span></div><div class="stat"><b>15 ans</b><span>d'expertise du courtage</span></div></div>'''
+    return '''<div class="stats"><div class="stat"><b>2 200</b><span>dossiers financés</span></div><div class="stat"><b>94 %</b><span>de taux d'accord</span></div><div class="stat"><b>+20</b><span>partenaires bancaires</span></div><div class="stat"><b>15 ans</b><span>d'expertise du courtage</span></div></div>'''
 
 def cta_band(title="Votre projet mérite une vraie étude", text="Un expert analyse votre situation et vous rappelle sous 24 h. C'est gratuit, et vous ne payez nos honoraires qu'une fois votre financement obtenu."):
     return f'''<section class="section"><div class="wrap"><div class="cta-band dark">{HEXWM}<div style="position:relative"><h2>{title}</h2><p class="lead" style="margin-top:12px">{text}</p></div>
@@ -226,7 +226,7 @@ REVIEWS = '''<div class="reviews">
 </div>'''
 
 def schema():
-    return '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"KAIRN","legalName":"BMB Financement","url":"https://kairn-finance.com/","telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr","address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressCountry":"FR"},"areaServed":["Lorient","Morbihan","Bretagne","France"],"openingHours":["Mo-Fr 09:00-12:00","Mo-Th 13:30-18:00","Fr 13:30-17:00"],"identifier":"ORIAS 14003265","sameAs":["https://www.facebook.com/vanetyslorient","https://www.linkedin.com/company/119024045/","https://www.instagram.com/kairn_finance/"]}</script>'''
+    return org_schema()
 
 def local_schema(fname, z):
     import json
@@ -242,6 +242,9 @@ PLAUSIBLE = """
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>"""
 
 def page(fname, title, desc, body, active=None, local=None, extra_head=""):
+    if en_bref(fname):
+        i = body.find("</section>") + len("</section>")
+        body = body[:i] + en_bref(fname) + body[i:]
     head = f'''<title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -260,6 +263,7 @@ def page(fname, title, desc, body, active=None, local=None, extra_head=""):
     html = re.sub(r' ([?!])(?=[\s<])', r'&nbsp;\1', html)
     open(os.path.join(OUT,fname),"w").write(html)
 
+exec(open(os.path.join(os.path.dirname(__file__) or ".","ia.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","locales.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","guides.py")).read())
@@ -274,4 +278,5 @@ if MODE=="site":
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")
+    open(os.path.join(OUT,"llms.txt"),"w").write(LLMS_TXT)
 shutil.copy("favicon.svg", OUT)

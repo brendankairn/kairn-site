@@ -263,13 +263,14 @@ def page(fname, title, desc, body, active=None, local=None, extra_head=""):
 exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","locales.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","guides.py")).read())
+exec(open(os.path.join(os.path.dirname(__file__) or ".","hypo_villes.py")).read())
 for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
     shutil.copy(f, OUT)
 
 if MODE=="site":
     import datetime
     today=datetime.date.today().isoformat()
-    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","partenaires.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+["guides.html"]+[g["f"] for g in GUIDES]
+    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","partenaires.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+[v["f"] for v in HYPO_VILLES]+["guides.html"]+[g["f"] for g in GUIDES]
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")

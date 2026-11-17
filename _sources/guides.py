@@ -53,7 +53,7 @@ dict(
   f="guide-capacite-emprunt-35.html",
   court="Capacité d'emprunt",
   tag="Prêt immobilier",
-  seo=("Capacité d'emprunt et règle des 35 % : comment calcule la banque | KAIRN",
+  seo=("Capacité d'emprunt et règle des 35 % | KAIRN",
        "Taux d'endettement de 35 %, durée de 25 ans, reste à vivre, apport : comment les banques calculent ce que vous pouvez emprunter. Le guide KAIRN, courtier à Lorient."),
   h1="Capacité d'emprunt : comment la banque fait le calcul",
   chapo="Avant de visiter, mieux vaut savoir ce que les banques accepteront de vous prêter. Les règles sont fixées au niveau national, mais chaque banque les applique à sa façon. Voici ce qui compte vraiment.",
@@ -318,7 +318,7 @@ dict(
   date="2026-11-16",
   court="Prêt viager hypothécaire",
   tag="Prêt hypothécaire",
-  seo=("Prêt viager hypothécaire : fonctionnement, coût et alternatives | KAIRN",
+  seo=("Prêt viager hypothécaire : fonctionnement et coût | KAIRN",
        "Emprunter sans mensualité grâce à son logement, après 60 ou 70 ans : principe, remboursement à la succession, protection des héritiers et alternatives. Le guide KAIRN."),
   h1="Prêt viager hypothécaire : emprunter sans mensualité grâce à son logement",
   chapo="Vous êtes propriétaire, à la retraite, et vous avez besoin de liquidités sans alourdir votre budget mensuel. Le prêt viager hypothécaire répond à ce besoin. C'est une solution utile, mais engageante : voici ce qu'il faut savoir.",
@@ -455,5 +455,5 @@ _hub = f'''
 <p class="lead" style="margin-top:18px">Des réponses claires aux questions que nos clients nous posent chaque jour. Écrites par l'équipe KAIRN, sans jargon.</p></div></section>
 <section class="section"><div class="wrap"><div class="cards">{guide_cards()}</div></div></section>
 {cta_band()}'''
-page(GUIDES_HUB, "Guides du financement : prêt immobilier, assurance, hypothécaire | KAIRN",
+page(GUIDES_HUB, "Guides du financement immobilier et hypothécaire | KAIRN",
      "Les guides pratiques de KAIRN, courtier à Lorient : capacité d'emprunt, assurance de prêt, prêt hypothécaire et viager, rachat de prêt, garanties. Des réponses claires, sans jargon.", _hub, active=GUIDES_HUB)

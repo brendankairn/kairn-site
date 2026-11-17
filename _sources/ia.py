@@ -40,7 +40,7 @@ def org_schema():
             ("Courtage en prêt immobilier","credit-immobilier.html"),("Courtage en prêt professionnel","pret-professionnel.html"),
             ("Regroupement de crédits","rachat-de-credits.html"),("Prêt hypothécaire et prêt viager hypothécaire","pret-hypothecaire.html"),
             ("Assurance de prêt","assurance-emprunteur.html")]]},
-         "sameAs":["https://www.facebook.com/vanetyslorient","https://www.linkedin.com/company/119024045/","https://www.instagram.com/kairn_finance/"]}
+         "sameAs":["https://www.facebook.com/KairnLorient","https://www.linkedin.com/company/119024045/","https://www.instagram.com/kairn_finance/"]}
     return '<script type="application/ld+json">'+_json.dumps(d,ensure_ascii=False)+'</script>'
 
 def faq_schema(items):

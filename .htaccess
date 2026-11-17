@@ -18,3 +18,6 @@ RedirectMatch 404 ^/\.git
 RedirectMatch 404 ^/README\.md$
 
 ErrorDocument 404 /index.html
+
+# Accents corrects dans llms.txt, robots.txt et sitemap.xml
+AddCharset UTF-8 .txt .xml

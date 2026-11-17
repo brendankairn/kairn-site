@@ -82,7 +82,7 @@ ZONES = [
         ("Comment se passe le suivi à distance ?","Par téléphone, visio et espace client sécurisé pour vos documents. Votre conseiller reste le même du début à la fin.")]),
 
  dict(f="courtier-lanester.html", nom="Lanester", court="Lanester",
-  seo=("Courtier immobilier à Lanester · KAIRN, experts en financements",
+  seo=("Courtier immobilier à Lanester · KAIRN",
        "Courtier en prêt immobilier à Lanester, à 10 minutes de notre agence de Lorient. Premier achat, maison familiale, prêt pro, regroupement de crédits. Étude gratuite, réponse sous 24 h."),
   h1="Votre courtier <span class='u'>à Lanester</span>, juste de l'autre côté du Scorff",
   lead="Lanester est à dix minutes de notre agence : premier logement, maison familiale ou local professionnel, nous y accompagnons tous les projets.",
@@ -160,7 +160,7 @@ ZONES = [
         ("Tout peut-il se faire à distance ?","Oui : premier appel ou visio, espace client sécurisé pour vos documents, puis signature chez le notaire de votre choix.")]),
 
  dict(f="courtier-saint-brieuc.html", nom="Saint-Brieuc", court="Saint-Brieuc",
-  seo=("Courtier en prêt immobilier à Saint-Brieuc et dans les Côtes-d'Armor · KAIRN",
+  seo=("Courtier en prêt immobilier à Saint-Brieuc · KAIRN",
        "Courtier en financement pour Saint-Brieuc, Plérin, Ploufragan, Langueux, Trégueux et la baie de Saint-Brieuc. Prêt immobilier, prêt pro, regroupement de crédits. Étude gratuite."),
   h1="Votre courtier pour <span class='u'>Saint-Brieuc</span> et la baie",
   lead="Saint-Brieuc, Plérin, Ploufragan, Langueux, Trégueux : des projets souvent accessibles, où un bon montage permet d'acheter plus tôt et dans de meilleures conditions.",
@@ -173,7 +173,7 @@ ZONES = [
         ("Comment se passe le suivi à distance ?","Par téléphone, en visio et via notre espace client sécurisé pour vos documents. Votre conseiller reste le même du début à la fin.")]),
 
  dict(f="courtier-saint-malo.html", nom="Saint-Malo", court="Saint-Malo",
-  seo=("Courtier en prêt immobilier à Saint-Malo, Dinard et sur la Côte d'Émeraude · KAIRN",
+  seo=("Courtier en prêt immobilier à Saint-Malo et Dinard · KAIRN",
        "Courtier en financement pour Saint-Malo, Dinard, Cancale, Saint-Briac et la Côte d'Émeraude. Résidence principale, secondaire, location saisonnière, prêt hypothécaire. Étude gratuite."),
   h1="Financer votre projet à <span class='u'>Saint-Malo</span> et sur la Côte d'Émeraude",
   lead="Saint-Malo, Dinard, Cancale, Saint-Briac : sur la Côte d'Émeraude, les budgets sont élevés et les projets mélangent résidences principales, secondaires et locations saisonnières.",
@@ -186,7 +186,7 @@ ZONES = [
         ("Tout peut-il se faire à distance ?","Oui : premier échange par téléphone ou en visio, espace client sécurisé pour vos documents, puis signature chez le notaire de votre choix.")]),
 
  dict(f="courtier-lannion.html", nom="Lannion et le Trégor", court="Lannion",
-  seo=("Courtier en prêt immobilier à Lannion, Perros-Guirec et dans le Trégor · KAIRN",
+  seo=("Courtier en prêt immobilier à Lannion et dans le Trégor · KAIRN",
        "Courtier en financement pour Lannion, Perros-Guirec, Trébeurden, Pleumeur-Bodou et le Trégor. Prêt immobilier, résidence secondaire, prêt pro. Étude gratuite, suivi à distance."),
   h1="Votre courtier pour <span class='u'>Lannion</span> et le Trégor",
   lead="Lannion, Perros-Guirec, Trébeurden, Pleumeur-Bodou : entre la Côte de Granit rose et les entreprises du numérique, des projets variés que nous suivons à distance.",
@@ -199,7 +199,7 @@ ZONES = [
         ("Comment se passe le suivi à distance ?","Par téléphone, en visio et via notre espace client sécurisé. Votre conseiller reste le même du début à la fin.")]),
 
  dict(f="courtier-concarneau.html", nom="Concarneau", court="Concarneau",
-  seo=("Courtier en prêt immobilier à Concarneau, Trégunc et Pont-Aven · KAIRN",
+  seo=("Courtier en prêt immobilier à Concarneau · KAIRN",
        "Courtier en financement pour Concarneau, Trégunc, Pont-Aven, Névez, Rosporden et la côte sud du Finistère. Prêt immobilier, prêt pro, prêt hypothécaire. Étude gratuite."),
   h1="Votre courtier pour <span class='u'>Concarneau</span> et la côte sud",
   lead="Concarneau, Trégunc, Pont-Aven, Névez : à moins d'une heure de notre agence, entre ports de pêche et stations balnéaires, des projets que nous connaissons bien.",
@@ -212,7 +212,7 @@ ZONES = [
         ("Quels sont vos honoraires ?","L'étude est gratuite. Nos honoraires ne sont dus qu'une fois votre financement obtenu, et ils sont annoncés dès le départ. Aucun versement ne peut être exigé avant.")]),
 
  dict(f="courtier-morbihan.html", nom="le Morbihan", court="Morbihan",
-  seo=("Courtier en crédit dans le Morbihan (56) · KAIRN, experts en financements",
+  seo=("Courtier en crédit dans le Morbihan (56) · KAIRN",
        "KAIRN, courtier en financement dans le Morbihan : prêt immobilier, professionnel, regroupement de crédits, prêt hypothécaire et assurance de prêt. Agence à Lorient, 9 experts."),
   h1="Votre courtier dans <span class='u'>le Morbihan</span>",
   lead="De Lorient à Vannes, de la côte au centre Bretagne : 9 experts basés à Lorient, plus de 30 banques partenaires et 15 ans de financements dans le département.",
@@ -225,7 +225,7 @@ ZONES = [
         ("Êtes-vous un courtier agréé ?","Oui. KAIRN (BMB Financement) est immatriculé à l'ORIAS sous le n° 14003265, vérifiable sur orias.fr, et couvert par une assurance de responsabilité civile professionnelle.")]),
 
  dict(f="courtier-bretagne.html", nom="la Bretagne", court="Bretagne",
-  seo=("Courtier en financement en Bretagne · KAIRN, experts en financements",
+  seo=("Courtier en financement en Bretagne · KAIRN",
        "Courtier en crédit en Bretagne : Morbihan, Finistère, Côtes-d'Armor, Ille-et-Vilaine. Prêt immobilier, professionnel, regroupement de crédits, prêt hypothécaire. Étude gratuite."),
   h1="Courtier en financement <span class='u'>partout en Bretagne</span>",
   lead="Basés à Lorient, nous accompagnons des projets dans les quatre départements bretons, et partout en France grâce à un parcours entièrement digitalisé.",

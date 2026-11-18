@@ -250,6 +250,7 @@ def page(fname, title, desc, body, active=None, local=None, extra_head=""):
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="canonical" href="https://kairn-finance.com/{'' if fname=='index.html' else fname}">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://kairn-finance.com/{'' if fname=='index.html' else fname}"><meta property="og:site_name" content="KAIRN"><meta property="og:image" content="https://kairn-finance.com/og-kairn.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="KAIRN, experts en financements"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -273,10 +274,32 @@ for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
 
 if MODE=="site":
     import datetime
+    import re as _re, subprocess as _sp
     today=datetime.date.today().isoformat()
+    # lastmod = vraie date de modification : on garde la date précédente si la page n'a pas changé depuis le dernier commit
+    _old={}
+    try:
+        for loc,lm in _re.findall(r"<loc>https://kairn-finance.com/([^<]*)</loc><lastmod>([^<]*)</lastmod>",open(os.path.join(OUT,"sitemap.xml")).read()):
+            _old[loc or "index.html"]=lm
+    except OSError: pass
+    def lastmod(p):
+        try:
+            changed=_sp.run(["git","-C",OUT,"diff","--quiet","HEAD","--",p]).returncode!=0
+            tracked=_sp.run(["git","-C",OUT,"ls-files","--error-unmatch",p],capture_output=True).returncode==0
+        except OSError:
+            return today
+        if changed or not tracked: return today
+        if p in _old and _old[p]!=today: return _old[p]
+        d=_sp.run(["git","-C",OUT,"log","-1","--format=%cs","--",p],capture_output=True,text=True).stdout.strip()
+        return d or today
     pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","pret-viager-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","partenaires.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+[v["f"] for v in HYPO_VILLES]+["guides.html"]+[g["f"] for g in GUIDES]
-    urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{today}</lastmod></url>\n" for p in pages)
+    urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{lastmod(p)}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")
-    open(os.path.join(OUT,"llms.txt"),"w").write(LLMS_TXT)
+    _known={"courtier-lorient.html","courtier-morbihan.html","courtier-bretagne.html"}
+    _llms=LLMS_TXT+"".join(f"- [Courtier en financement · {z['court']}](https://kairn-finance.com/{z['f']})\n" for z in ZONES if z["f"] not in _known)
+    _llms+="\n## Prêt hypothécaire partout en France\n\n"+"".join(f"- [Prêt hypothécaire à {v['ville']}](https://kairn-finance.com/{v['f']})\n" for v in HYPO_VILLES)
+    _llms+="\n## Guides\n\n- [Tous nos guides](https://kairn-finance.com/guides.html)\n"+"".join(f"- [{g['court']}](https://kairn-finance.com/{g['f']})\n" for g in GUIDES)
+    _llms+="\n## Outils\n\n- [Simulateurs de crédit](https://kairn-finance.com/simulateurs.html) : capacité d'emprunt, regroupement de crédits, prêt hypothécaire, prêt professionnel, assurance de prêt.\n"
+    open(os.path.join(OUT,"llms.txt"),"w").write(_llms)
 shutil.copy("favicon.svg", OUT)

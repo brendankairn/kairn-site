@@ -64,11 +64,58 @@ HYPO_VILLES = [
   communes="Strasbourg, Schiltigheim, Illkirch-Graffenstaden, Lingolsheim, Bischheim, Haguenau, Sélestat, Colmar, Mulhouse."),
 ]
 
+
+# Questions propres à chaque ville (mécanismes généraux, aucun chiffre de marché)
+FAQ_VILLE = {
+ "pret-hypothecaire-paris.html": [
+  ("Peut-on financer un rachat de soulte à Paris avec un prêt hypothécaire ?","Oui. Après un divorce ou une succession, la banque finance la part due à l'autre propriétaire et prend une garantie sur le logement que vous conservez. Le notaire rédige l'acte de partage et inscrit la garantie le même jour."),
+  ("Un dirigeant aux revenus irréguliers peut-il emprunter sur son bien ?","Oui, c'est l'un des cas les plus fréquents. La banque regarde d'abord la valeur du bien et le patrimoine, puis vérifie que la mensualité reste supportable sur la durée. Nous présentons vos bilans et votre situation de façon claire pour que le dossier soit compris.")],
+ "pret-hypothecaire-lyon.html": [
+  ("Un chef d'entreprise lyonnais peut-il garantir un prêt avec son bien personnel ?","Oui. Le prêt hypothécaire peut financer un besoin professionnel tout en étant garanti par un bien privé, résidence principale ou bien locatif. Nous vérifions avec vous la répartition des risques entre votre patrimoine et votre société avant de déposer le dossier."),
+  ("Un bien locatif peut-il servir de garantie ?","Oui. Un appartement loué, même encore en partie financé, peut garantir un nouveau prêt. Le montant mobilisable dépend de sa valeur, du crédit restant dû et des loyers perçus.")],
+ "pret-hypothecaire-marseille.html": [
+  ("Comment racheter la part de ses cohéritiers ?","Le prêt hypothécaire finance la soulte versée aux cohéritiers, et le bien hérité sert de garantie. Le notaire chargé de la succession signe en même temps le partage et le prêt."),
+  ("Une résidence secondaire peut-elle garantir un prêt ?","Oui. Tout bien dont vous êtes propriétaire peut servir de garantie, y compris une maison de vacances. Cela permet de financer un projet sans toucher à votre résidence principale.")],
+ "pret-hypothecaire-toulouse.html": [
+  ("Peut-on regrouper ses crédits avec une garantie hypothécaire ?","Oui. Quand vous êtes propriétaire, la garantie sur votre bien rassure la banque et permet souvent d'obtenir une durée plus longue et un taux plus doux qu'un regroupement sans garantie. Nous comparons toujours les deux options."),
+  ("Je viens de créer mon entreprise, puis-je emprunter ?","Les banques demandent en général plusieurs bilans pour un prêt classique. Avec une garantie sur un bien de valeur, certaines acceptent d'étudier un dossier plus tôt, à condition que le remboursement reste réaliste.")],
+ "pret-hypothecaire-nice.html": [
+  ("Comment fonctionne le prêt viager hypothécaire ?","Vous recevez un capital ou des versements sans rembourser de mensualités. Le prêt et les intérêts sont remboursés à la vente du bien ou lors de la succession, et la dette ne peut jamais dépasser la valeur du bien au moment du remboursement."),
+  ("Mes enfants doivent-ils être informés ?","Rien ne l'impose, mais nous le conseillons. Le prêt sera remboursé sur la valeur du bien au moment de la succession : en parler en amont évite les mauvaises surprises. Vos proches peuvent participer aux rendez-vous si vous le souhaitez.")],
+ "pret-hypothecaire-nantes.html": [
+  ("Peut-on vous rencontrer en agence depuis Nantes ?","Oui. Notre agence est à Lorient, à environ deux heures de route. La plupart des clients nantais préfèrent tout faire à distance, mais nous vous recevons volontiers si vous le souhaitez."),
+  ("Combien de temps faut-il pour obtenir les fonds ?","Il faut compter l'étude du dossier, l'estimation du bien, l'offre de la banque puis le délai de réflexion légal avant la signature chez le notaire. Nous vous donnons un calendrier précis dès l'étude.")],
+ "pret-hypothecaire-bordeaux.html": [
+  ("Peut-on aider ses enfants à acheter grâce à son bien ?","Oui. Le prêt hypothécaire permet de financer un apport ou une donation sans vendre. Nous vérifions avec vous que la mensualité reste compatible avec vos revenus, et nous vous conseillons de faire le point avec votre notaire sur la donation."),
+  ("Quelle différence entre prêt relais et prêt hypothécaire ?","Le prêt relais finance un achat en attendant la vente d'un bien précis, sur une durée courte. Le prêt hypothécaire s'appuie sur un bien que vous gardez, sur une durée plus longue. Nous comparons les deux selon votre projet.")],
+ "pret-hypothecaire-lille.html": [
+  ("Le regroupement avec garantie est-il réservé aux gros patrimoines ?","Non. Il suffit d'être propriétaire d'un bien dont la valeur couvre le montant regroupé. C'est souvent la solution pour réunir crédits immobiliers, prêts personnels et crédits renouvelables en une seule mensualité."),
+  ("Peut-on financer des travaux dans une maison ancienne ?","Oui. Le prêt hypothécaire finance la rénovation, l'isolation ou l'extension, et la maison sert elle-même de garantie. Les travaux peuvent aussi augmenter sa valeur.")],
+ "pret-hypothecaire-montpellier.html": [
+  ("Prêt hypothécaire ou viager hypothécaire : comment choisir ?","Le prêt hypothécaire se rembourse par mensualités, il convient si vos revenus le permettent. Le viager hypothécaire ne demande aucune mensualité et se rembourse à la vente ou à la succession : il s'adresse surtout aux seniors. Nous étudions les deux avec vous."),
+  ("Un logement étudiant peut-il garantir un nouveau prêt ?","Oui, comme tout bien locatif. Sa valeur, le crédit restant dû et les loyers perçus déterminent le montant que vous pouvez mobiliser.")],
+ "pret-hypothecaire-strasbourg.html": [
+  ("Le prêt hypothécaire fonctionne-t-il autrement en Alsace ?","Le principe est le même, mais l'Alsace et la Moselle ont leur propre publicité foncière : l'hypothèque est inscrite au Livre foncier et non au service de la publicité foncière. Votre notaire s'en charge, nous en tenons compte dans le calendrier."),
+  ("Peut-on emprunter sans vendre pour racheter une soulte ?","Oui. La banque finance la part due à votre ex-conjoint ou à vos cohéritiers, et le bien que vous conservez sert de garantie.")],
+}
+
+def hypo_schema(v, faqs):
+    import json as _j, re as _r
+    url="https://kairn-finance.com/"+v["f"]
+    d={"@context":"https://schema.org","@graph":[
+      {"@type":"Service","@id":url+"#service","name":"Prêt hypothécaire à "+v["ville"],"serviceType":"Courtage en prêt hypothécaire","url":url,
+       "provider":{"@id":"https://kairn-finance.com/#kairn"},
+       "areaServed":[c.strip().rstrip(".") for c in v["communes"].split(",") if "tout" not in c][:12]},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kairn-finance.com/"},{"@type":"ListItem","position":2,"name":"Prêt hypothécaire","item":"https://kairn-finance.com/pret-hypothecaire.html"},{"@type":"ListItem","position":3,"name":v["ville"],"item":url}]},
+      {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":_r.sub("<[^>]+>","",q),"acceptedAnswer":{"@type":"Answer","text":_r.sub("<[^>]+>","",a)}} for q,a in faqs]}]}
+    return '<script type="application/ld+json">'+_j.dumps(d,ensure_ascii=False)+'</script>'
+
 def hypo_ville_links(exclude=None):
     return "".join(f'<a class="chip" href="{v["f"]}">{v["ville"]}</a>' for v in HYPO_VILLES if v["f"]!=exclude)
 
 for v in HYPO_VILLES:
     faqs=[(f"Peut-on faire un prêt hypothécaire à {v['ville']} avec un courtier basé à Lorient ?",f"Oui. Le prêt hypothécaire est l'une de nos spécialités et nous l'accompagnons partout en France. Tout se fait par téléphone, en visio et via notre espace client sécurisé, et la signature a lieu chez le notaire de votre choix, à {v['ville']} ou ailleurs."),
+          *FAQ_VILLE[v["f"]],
           ("Combien peut-on emprunter ?","En général jusqu'à 70 % de la valeur du bien, moins les crédits qui pèsent déjà dessus. Le montant final dépend aussi de votre capacité de remboursement et de la nature du bien."),
           ("Quels sont vos honoraires ?","L'étude est gratuite. Nos honoraires ne sont dus qu'une fois votre financement obtenu, et ils sont annoncés dès le départ. Aucun versement ne peut être exigé avant.")]
     body = page_hero(f'<a href="pret-hypothecaire.html">Prêt hypothécaire</a> / {v["ville"]}', f'Prêt hypothécaire · {v["ville"]}', f"Prêt hypothécaire <span class='u'>à {v['ville']}</span>", v["lead"]) + f'''
@@ -83,7 +130,7 @@ for v in HYPO_VILLES:
 <div class="panel"><h3 style="font-size:1rem;letter-spacing:.06em">Secteur couvert</h3><p style="margin-top:10px;color:var(--muted)">{v["communes"]}</p>
 <h3 style="font-size:1rem;letter-spacing:.06em;margin-top:22px">Ailleurs en France</h3><div class="chips" style="margin-top:10px">{hypo_ville_links(v["f"])}</div></div>
 </div></section>
-<section class="section white"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions</h2></div>{faq(faqs)}</div></section>
+<section class="section white"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions à {v["ville"]}</h2></div>{faq(faqs)}</div></section>
 <section class="section" style="padding-block:0 8px"><div class="wrap"><p class="warning">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p></div></section>
 {cta_band(f"Un projet de prêt hypothécaire à {v['ville']} ?")}'''
-    page(v["f"], f"Prêt hypothécaire à {v['ville']} · Courtier KAIRN", f"Prêt hypothécaire à {v['ville']} : mobilisez la valeur de votre bien sans le vendre. Courtier spécialisé, étude gratuite, dossier suivi à distance jusqu'à la signature.", body)
+    page(v["f"], f"Prêt hypothécaire à {v['ville']} · Courtier KAIRN", f"Prêt hypothécaire à {v['ville']} : mobilisez la valeur de votre bien sans le vendre. Courtier spécialisé, étude gratuite, dossier suivi à distance jusqu'à la signature.", body, extra_head=hypo_schema(v, faqs))

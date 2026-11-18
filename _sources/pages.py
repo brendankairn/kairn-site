@@ -283,7 +283,15 @@ cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>premiè
 <div class="done" hidden>{I["done"]}<h3>Candidature reçue</h3><p class="fine">Nous revenons vers vous rapidement.</p></div><div class="fail done" hidden><h3>L'envoi n'a pas abouti</h3><p class="fine">Écrivez-nous à {MAIL}.</p></div></form>
 </div></section>
 {cta_band()}'''
-page("cabinet.html","Le cabinet KAIRN · Courtiers à Lorient","KAIRN, cabinet de courtage en financement fondé par Brendan Le Roux à Lorient : 9 experts, 15 ans d'expérience, une méthode en 4 étapes. Recrutement ouvert.",cab)
+def team_schema():
+    import json as _j
+    org={"@id":"https://kairn-finance.com/#kairn"}
+    d={"@context":"https://schema.org","@graph":[
+      {"@type":"AboutPage","@id":"https://kairn-finance.com/cabinet.html","name":"Le cabinet KAIRN","about":org,"mainEntity":org},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kairn-finance.com/"},{"@type":"ListItem","position":2,"name":"Le cabinet","item":"https://kairn-finance.com/cabinet.html"}]}]+[
+      {"@type":"Person","@id":f"https://kairn-finance.com/cabinet.html#{ph}","name":n,"jobTitle":r,"image":f"https://kairn-finance.com/equipe/{ph}.jpg","worksFor":org,"workLocation":{"@type":"Place","name":"Lorient"}} for n,r,ph in team]}
+    return '<script type="application/ld+json">'+_j.dumps(d,ensure_ascii=False)+'</script>'
+page("cabinet.html","Le cabinet KAIRN · Courtiers à Lorient","KAIRN, cabinet de courtage en financement fondé par Brendan Le Roux à Lorient : 9 experts, 15 ans d'expérience, une méthode en 4 étapes. Recrutement ouvert.",cab, extra_head=team_schema())
 
 # ---------- PARTENAIRES ----------
 def logos(items):

@@ -31,7 +31,8 @@ def en_bref(fname):
 def org_schema():
     d = {"@context":"https://schema.org","@type":"FinancialService","@id":"https://kairn-finance.com/#kairn",
          "name":"KAIRN","legalName":"BMB Financement","description":"KAIRN est un "+FAITS+".",
-         "url":"https://kairn-finance.com/","logo":"https://kairn-finance.com/favicon.svg",
+         "url":"https://kairn-finance.com/","logo":"https://kairn-finance.com/logo-kairn.png","image":"https://kairn-finance.com/og-kairn.jpg",
+         "founder":{"@id":"https://kairn-finance.com/cabinet.html#brendan-le-roux"},
          "telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr",
          "address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressRegion":"Bretagne","addressCountry":"FR"},
          "areaServed":["Lorient","Morbihan","Bretagne","France"],

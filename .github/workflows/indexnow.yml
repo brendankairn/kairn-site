@@ -1,0 +1,25 @@
+name: IndexNow quotidien
+# Chaque matin, signale à Bing (IndexNow) les pages nouvelles ou modifiées
+# sur main dans les dernières 24 h. Rien n'est envoyé s'il n'y a pas de changement.
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 7h heure de Paris (hiver)
+  workflow_dispatch:
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pages modifiées depuis 24 h
+        run: |
+          PAGES=$(git log --since="24 hours ago" --name-only --pretty=format: -- '*.html' \
+            | sort -u | grep -v '^google' | grep -v '/' | while read f; do [ -f "$f" ] && echo "$f"; done \
+            | sed 's#^index\.html$#https://kairn-finance.com/#')
+          if [ -z "$PAGES" ]; then echo "Aucune page nouvelle ou modifiée : rien à envoyer."; exit 0; fi
+          echo "$PAGES"
+          node scripts/indexnow.js $PAGES

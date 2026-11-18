@@ -413,7 +413,7 @@ dict(
 <p>Peu d'établissements proposent le prêt viager hypothécaire. Notre rôle est de savoir qui le fait, à quelles conditions, et de vous dire honnêtement si une autre solution vous convient mieux.</p>
 ''',
   sim="sim_hypo", sim_titre="Estimez ce que votre bien peut mobiliser",
-  lien=("pret-hypothecaire.html","Notre service prêt hypothécaire"),
+  lien=("pret-viager-hypothecaire.html","Notre service prêt viager hypothécaire"),
   faqs=[("Faut-il un bilan de santé ?","Non. Il n'y a pas d'assurance décès sur ce prêt, puisqu'il est justement remboursé au décès."),
         ("Le bien doit-il être libre de tout crédit ?","Pas forcément, mais le prêt viager sert d'abord à rembourser ce qui reste dû sur le bien. Le reste vous est versé."),
         ("Peut-on rembourser par anticipation ?","Oui. Vous ou vos héritiers pouvez rembourser à tout moment. Les conditions sont précisées dans l'offre.")]

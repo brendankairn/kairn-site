@@ -178,10 +178,55 @@ metier("pret-hypothecaire.html","Prêt hypothécaire","Prêt hypothécaire",
   ("Combien coûtent les frais d'hypothèque ?","Les frais de notaire liés à l'hypothèque représentent en général 1,5 à 2 % du montant emprunté. Nous les intégrons dans la simulation détaillée.")],
  extra=f'''<section class="section" id="seniors"><div class="wrap"><div class="section-head"><span class="eyebrow">Solutions patrimoniales</span><h2>Pour les seniors et les situations délicates</h2></div>
 <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-<div class="card"><div class="ico">{I["home"]}</div><h3>Prêt viager hypothécaire</h3><p>Pour les propriétaires seniors : obtenir des liquidités sans vendre et sans mensualités, le prêt étant remboursé au moment de la vente ou de la succession.</p></div>
+<div class="card"><div class="ico">{I["home"]}</div><h3>Prêt viager hypothécaire</h3><p>Pour les propriétaires seniors : obtenir des liquidités sans vendre et sans mensualités, le prêt étant remboursé au moment de la vente ou de la succession.</p><a class="more" href="pret-viager-hypothecaire.html">Découvrir le prêt viager hypothécaire {I["arrow"]}</a></div>
 <div class="card"><div class="ico">{I["key"]}</div><h3>Vente à réméré</h3><p>Vendre temporairement son bien pour se refinancer, tout en conservant le droit de le racheter dans un délai fixé, en général jusqu'à 5 ans. Une solution encadrée, à étudier avec soin.</p></div>
 </div></div></section>
 <section class="section white"><div class="wrap"><div class="section-head"><span class="eyebrow">Partout en France</span><h2>Le prêt hypothécaire dans votre ville</h2><p class="lead">Nous accompagnons les propriétaires de toute la France, à distance, jusqu'à la signature chez leur notaire.</p></div><div class="chips"><a class="chip" href="pret-hypothecaire-paris.html">Paris</a><a class="chip" href="pret-hypothecaire-lyon.html">Lyon</a><a class="chip" href="pret-hypothecaire-marseille.html">Marseille</a><a class="chip" href="pret-hypothecaire-toulouse.html">Toulouse</a><a class="chip" href="pret-hypothecaire-nice.html">Nice</a><a class="chip" href="pret-hypothecaire-nantes.html">Nantes</a><a class="chip" href="pret-hypothecaire-bordeaux.html">Bordeaux</a><a class="chip" href="pret-hypothecaire-lille.html">Lille</a><a class="chip" href="pret-hypothecaire-montpellier.html">Montpellier</a><a class="chip" href="pret-hypothecaire-strasbourg.html">Strasbourg</a></div></div></section>''')
+
+# ---------- PRÊT VIAGER HYPOTHÉCAIRE (page service, partout en France) ----------
+VIAGER_FAQS = [
+ ("Qu'est-ce qu'un prêt viager hypothécaire ?","C'est un prêt prévu par le Code de la consommation, réservé aux propriétaires, garanti par une hypothèque sur un logement. Vous ne remboursez rien de votre vivant, ni capital ni intérêts : le prêt est remboursé au décès, ou plus tôt si vous vendez le bien. Vous restez propriétaire et vous continuez à y vivre."),
+ ("À partir de quel âge peut-on l'obtenir ?","Il s'adresse aux propriétaires seniors. L'âge minimum dépend de l'établissement prêteur, en général entre 60 et 70 ans. Plus vous êtes âgé, plus la part de la valeur du bien qui peut être prêtée est importante."),
+ ("Combien peut-on emprunter ?","Le montant dépend de la valeur du bien, de votre âge et de l'établissement. Il reste nettement inférieur à la valeur du bien, car les intérêts s'ajoutent à la dette pendant toute la durée du prêt. Nous interrogeons les prêteurs pour connaître le montant réellement accessible dans votre cas."),
+ ("Mes héritiers risquent-ils de devoir payer ?","Non. La loi plafonne la dette à la valeur du bien au moment du remboursement. Si le bien vaut moins que la somme due, les héritiers ne paient pas la différence. Ils peuvent rembourser et garder le bien, ou le vendre et conserver ce qui reste après remboursement."),
+ ("Faut-il justifier de revenus ou remplir un questionnaire de santé ?","Il n'y a pas de questionnaire de santé, puisque le prêt est justement remboursé au décès. Comme aucune mensualité n'est due, vos revenus ne sont pas le critère principal : c'est le bien et votre âge qui comptent."),
+ ("Pourquoi passer par un courtier ?","Peu d'établissements proposent le prêt viager hypothécaire et leurs conditions diffèrent. Notre rôle est de savoir qui le fait, de comparer les propositions, de préparer le dossier jusqu'à l'acte chez le notaire, et de vous dire honnêtement si une autre solution vous convient mieux."),
+ ("Intervenez-vous partout en France ?","Oui. Notre cabinet est à Lorient et nous accompagnons des propriétaires dans toute la France, à distance, par téléphone ou en visio. La signature a lieu chez votre notaire, près de chez vous."),
+]
+viager_body = page_hero('<a href="pret-hypothecaire.html">Prêt hypothécaire</a> / Prêt viager hypothécaire', "Prêt viager hypothécaire",
+ "Des liquidités grâce à votre logement, <span class='u'>sans mensualité</span>",
+ "Propriétaire et senior ? Le prêt viager hypothécaire vous permet d'obtenir une somme tout en restant chez vous, sans rien rembourser de votre vivant. Nous vous accompagnons partout en France.") + f'''
+<section class="section"><div class="wrap split">
+<div class="prose"><span class="eyebrow">Le principe</span><h2 style="color:var(--text)">Vous restez propriétaire, et vous restez chez vous</h2>
+<p>Un établissement vous prête une somme, versée en une fois ou en plusieurs, garantie par une <strong>hypothèque</strong> sur votre logement. Vous ne payez <strong>aucune mensualité</strong> : ni capital ni intérêts. Le prêt est remboursé au décès, ou plus tôt si vous vendez le bien.</p>
+<p>La loi protège vos proches : la dette ne peut jamais dépasser la valeur du bien. C'est une solution utile mais engageante, car les intérêts s'ajoutent chaque année à la somme due. Nous prenons le temps de vous l'expliquer, ainsi qu'à votre famille si vous le souhaitez.</p></div>
+<div class="panel">{ticks([("Compléter une retraite","Disposer d'un capital sans alourdir votre budget mensuel."),("Adapter le logement","Travaux d'accessibilité, rénovation, confort."),("Aider un proche","Donner un coup de pouce à un enfant ou un petit-enfant."),("Faire face à une dépense","Une dépense importante, sans vendre votre bien.")])}</div></div></section>
+<section class="section white"><div class="wrap">
+<div class="section-head"><span class="eyebrow">Notre accompagnement</span><h2>Quatre étapes, un conseiller dédié</h2></div>
+<div class="steps">
+<div class="step-card"><div class="n">1</div><h3>Étude gratuite</h3><ul><li>Votre besoin et votre situation</li><li>La valeur de votre bien</li><li>Les alternatives possibles</li></ul></div>
+<div class="step-card"><div class="n">2</div><h3>Recherche du prêteur</h3><ul><li>Les rares établissements qui le proposent</li><li>Comparaison des montants et des conditions</li></ul></div>
+<div class="step-card"><div class="n">3</div><h3>Dossier et offre</h3><ul><li>Expertise du bien</li><li>Offre écrite, délai de réflexion de 10 jours</li></ul></div>
+<div class="step-card"><div class="n">4</div><h3>Signature chez le notaire</h3><ul><li>Acte notarié et hypothèque</li><li>Versement des fonds</li></ul></div>
+</div></div></section>
+<section class="section"><div class="wrap split">
+<div class="prose"><span class="eyebrow">À comparer</span><h2 style="color:var(--text)">Les alternatives que nous étudions avec vous</h2>
+<ul class="guide-list">
+<li><b>Le <a href="pret-hypothecaire.html">prêt hypothécaire classique</a></b>, avec des mensualités, si vos revenus le permettent. Il coûte souvent moins cher.</li>
+<li><b>Le prêt avance mutation</b>, qui permet de ne payer que les intérêts, ou rien, jusqu'à la vente du bien.</li>
+<li><b>La vente en viager</b> ou la vente de la nue-propriété : vous n'êtes plus propriétaire, mais vous percevez un capital et gardez l'usage du logement.</li>
+</ul></div>
+<div class="panel"><h3 style="font-size:1rem;letter-spacing:.06em">Partout en France</h3><p style="margin-top:10px;color:var(--muted)">Nous accompagnons les propriétaires de toute la France, à distance, jusqu'à la signature chez leur notaire.</p><div class="chips" style="margin-top:14px"><a class="chip" href="pret-hypothecaire-paris.html">Paris</a><a class="chip" href="pret-hypothecaire-lyon.html">Lyon</a><a class="chip" href="pret-hypothecaire-marseille.html">Marseille</a><a class="chip" href="pret-hypothecaire-toulouse.html">Toulouse</a><a class="chip" href="pret-hypothecaire-nice.html">Nice</a><a class="chip" href="pret-hypothecaire-nantes.html">Nantes</a><a class="chip" href="pret-hypothecaire-bordeaux.html">Bordeaux</a><a class="chip" href="pret-hypothecaire-lille.html">Lille</a><a class="chip" href="pret-hypothecaire-montpellier.html">Montpellier</a><a class="chip" href="pret-hypothecaire-strasbourg.html">Strasbourg</a><a class="chip" href="courtier-bretagne.html">Bretagne</a></div></div>
+</div></section>
+{avis_metier("pret-hypothecaire.html")}
+<section class="section white"><div class="wrap"><div class="section-head"><span class="eyebrow">Pour aller plus loin</span><h2>Nos guides</h2></div><div class="cards">
+<a class="card" href="guide-pret-viager-hypothecaire.html"><span class="tag">Guide</span><h3>Prêt viager hypothécaire : fonctionnement, coût et héritiers</h3><span class="more">Lire le guide {I["arrow"]}</span></a>
+<a class="card" href="guide-pret-hypothecaire.html"><span class="tag">Guide</span><h3>Prêt hypothécaire : emprunter grâce à votre patrimoine</h3><span class="more">Lire le guide {I["arrow"]}</span></a></div></div></section>
+<section class="section"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions sur le prêt viager hypothécaire</h2></div>{faq(VIAGER_FAQS)}</div></section>
+{cta_band("Parlons de votre projet, sans engagement","Un expert étudie votre situation gratuitement et vous rappelle sous 24 h. Vous ne payez nos honoraires qu'une fois votre financement obtenu.")}'''
+page("pret-viager-hypothecaire.html","Prêt viager hypothécaire partout en France | KAIRN",
+ "Courtier en prêt viager hypothécaire pour les propriétaires seniors, partout en France : liquidités sans mensualité, recherche du prêteur, étude gratuite.",
+ viager_body, active="pret-hypothecaire.html", extra_head=faq_schema(VIAGER_FAQS))
 
 metier("assurance-emprunteur.html","Assurance de prêt","Assurance de prêt",
  "Payez-vous trop pour <span class='u'>votre assurance de prêt</span> ?",

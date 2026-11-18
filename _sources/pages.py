@@ -254,8 +254,9 @@ part = page_hero("Nos partenaires","Nos partenaires","Un réseau solide <span cl
 <div><div class="section-head"><span class="eyebrow">Notaires</span><h2>Les notaires, à chaque étape</h2><p class="lead">De la promesse de vente à la signature de l'acte, nous coordonnons votre financement avec votre notaire pour que les fonds soient prêts le jour J.</p></div>{logos([("Notaires de France","notaires"),("Notaire &amp; Breton","notaire-breton")])}</div>
 <div><div class="section-head"><span class="eyebrow">Assurance de prêt</span><h2>Assurance emprunteur</h2><p class="lead">Pour trouver la meilleure couverture au meilleur prix, nous passons par des intermédiaires spécialisés de l'assurance de prêt.</p></div>{logos([("Assurea","assurea"),("Digital Insure","digital-insure")])}</div>
 </div></section>
-<section class="section"><div class="wrap">
+<section class="section"><div class="wrap split">
 <div><div class="section-head"><span class="eyebrow">Vente immobilière</span><h2>Choizimmo, pour choisir son agence</h2><p class="lead">Choizimmo est un comparateur gratuit et sans engagement qui aide les vendeurs à choisir l'agence immobilière la plus adaptée à leur bien, à partir des ventes enregistrées par l'État (DVF). Le vendeur estime son bien en ligne, puis un conseiller le visite, affine le prix et lui présente les agences qui vendent le mieux les biens comme le sien.</p><p style="margin-top:14px"><a class="btn btn-outline" href="https://choizimmo.fr">Découvrir Choizimmo {I["arrow"]}</a></p></div></div>
+<div><a href="https://choizimmo.fr" style="display:inline-block;text-decoration:none">{logos([("Choizimmo","choizimmo")])}</a></div>
 </div></section>
 <section class="section" style="padding-block:28px 0"><div class="wrap"><p class="fine">Liste non exhaustive. Les marques et logos cités appartiennent à leurs propriétaires respectifs. KAIRN est un courtier indépendant : aucun de ces établissements ne détient de participation dans le cabinet.</p></div></section>
 {cta_band()}'''

@@ -40,7 +40,9 @@ ZONES = [
   communes="Vannes, Séné, Saint-Avé, Theix-Noyalo, Arradon, Ploeren, Plescop, Saint-Nolff, Elven, Surzur, Baden, Larmor-Baden, Le Bono, Sarzeau, Arzon et la presqu'île de Rhuys.",
   faqs=[("Pourquoi un courtier de Lorient pour un achat à Vannes ?","Nous travaillons avec les mêmes banques sur tout le Morbihan, et l'essentiel du travail se fait à distance. Vous gardez un seul conseiller dédié, joignable directement, du premier appel à la signature."),
         ("Comment être plus rapide que les autres acheteurs ?","En préparant le dossier avant de trouver le bien : budget validé, pièces réunies, attestation de financement. Le jour où vous signez le compromis, la demande part aux banques immédiatement."),
-        ("Financez-vous l'achat sur la presqu'île de Rhuys ou à Arzon ?","Oui, résidence principale comme secondaire. Nous adaptons le montage au budget, souvent plus élevé sur la côte.")]),
+        ("Financez-vous l'achat sur la presqu'île de Rhuys ou à Arzon ?","Oui, résidence principale comme secondaire. Nous adaptons le montage au budget, souvent plus élevé sur la côte."),
+        ("Avez-vous une agence à Vannes ?","Non, notre agence est à Lorient, au 8 mail Jeanne Villepreux-Power. Nos clients vannetais nous rencontrent à l'agence, en visio ou par téléphone, et déposent leurs documents dans un espace client sécurisé. La signature a lieu chez le notaire de votre choix."),
+        ("Vendre et acheter autour du golfe : comment s'organiser ?","Le prêt relais permet d'acheter avant d'avoir vendu. Nous calculons votre budget dans les deux scénarios, vendre d'abord ou acheter d'abord, avant même la mise en vente. Notre guide <a href='guide-vendre-racheter-pret-relais.html'>Vendre pour racheter</a> détaille chaque étape.")]),
 
  dict(f="courtier-auray-carnac-quiberon.html", nom="Auray, Carnac et Quiberon", court="Auray · Carnac · Quiberon",
   seo=("Courtier en prêt immobilier à Auray, Carnac, Quiberon · KAIRN",
@@ -131,7 +133,9 @@ ZONES = [
   communes="Quimper, Ergué-Gabéric, Pluguffan, Plomelin, Briec, Fouesnant, Bénodet, Concarneau, Pont-l'Abbé, Rosporden.",
   faqs=[("Pourquoi un courtier de Lorient pour un achat à Quimper ?","Nous travaillons avec les mêmes réseaux bancaires dans tout le Finistère et le Morbihan, et l'essentiel du travail se fait à distance. Vous gardez un seul conseiller, joignable directement, jusqu'à la signature."),
         ("Comment se passe le suivi à distance ?","Un premier appel ou une visio pour comprendre votre projet, puis un espace client sécurisé pour vos documents. Votre conseiller vous tient informé à chaque étape."),
-        ("Quels sont vos honoraires ?","L'étude est gratuite. Nos honoraires ne sont dus qu'une fois votre financement obtenu, et ils sont annoncés dès le départ. Aucun versement ne peut être exigé avant.")]),
+        ("Quels sont vos honoraires ?","L'étude est gratuite. Nos honoraires ne sont dus qu'une fois votre financement obtenu, et ils sont annoncés dès le départ. Aucun versement ne peut être exigé avant."),
+        ("Avez-vous une agence à Quimper ?","Non, notre agence est à Lorient, au 8 mail Jeanne Villepreux-Power. Nos clients de Cornouaille nous rencontrent à l'agence, en visio ou par téléphone, et la signature a lieu chez le notaire de leur choix."),
+        ("Financez-vous un prêt hypothécaire ou un regroupement de crédits à Quimper ?","Oui. En plus du prêt immobilier, nous montons des <a href='pret-hypothecaire.html'>prêts hypothécaires</a>, des <a href='rachat-de-credits.html'>regroupements de crédits</a> et des <a href='pret-viager-hypothecaire.html'>prêts viagers hypothécaires</a> pour les propriétaires de toute la Cornouaille.")]),
 
  dict(f="courtier-rennes.html", nom="Rennes", court="Rennes",
   seo=("Courtier en prêt immobilier à Rennes et Rennes Métropole · KAIRN",
@@ -217,12 +221,15 @@ ZONES = [
   h1="Votre courtier dans <span class='u'>le Morbihan</span>",
   lead="De Lorient à Vannes, de la côte au centre Bretagne : 9 experts basés à Lorient, plus de 20 banques partenaires et 15 ans de financements dans le département.",
   intro_h="Un cabinet morbihannais, des banques du département",
-  intro="<p>Le Morbihan, c'est à la fois un littoral très recherché, des villes dynamiques comme Lorient et Vannes et un centre Bretagne plus accessible. Les banques n'y raisonnent pas partout de la même façon : certaines agences sont très actives sur la côte, d'autres sur l'accession en zone rurale.</p><p>Notre ancrage local nous permet de savoir où envoyer votre dossier. Et notre réseau de plus de 20 établissements nous permet de dépasser les limites d'une seule banque.</p>",
+  intro="<p>Le Morbihan, c'est à la fois un littoral très recherché, des villes dynamiques comme Lorient et Vannes et un centre Bretagne plus accessible. Les banques n'y raisonnent pas partout de la même façon : certaines agences sont très actives sur la côte, d'autres sur l'accession en zone rurale.</p><p>Notre ancrage local nous permet de savoir où envoyer votre dossier. Et notre réseau de plus de 20 établissements nous permet de dépasser les limites d'une seule banque.</p><p>Depuis Lorient, nos 9 experts ont financé plus de 2 200 dossiers en 15 ans, avec un taux d'accord de 94 %. Nos clients viennent de <a href='courtier-lorient.html'>Lorient</a>, de <a href='courtier-vannes.html'>Vannes</a>, d'<a href='courtier-auray-carnac-quiberon.html'>Auray</a>, de <a href='courtier-pontivy.html'>Pontivy</a>, d'<a href='courtier-hennebont.html'>Hennebont</a>, de <a href='courtier-lanester.html'>Lanester</a> et de <a href='courtier-ploemeur.html'>Ploemeur</a>.</p>",
   projets=[("Crédit immobilier","Résidence principale, secondaire, investissement."),("Prêt professionnel","Création, reprise, locaux, matériel."),("Regroupement de crédits","Une seule mensualité, adaptée à votre budget."),("Prêt hypothécaire","Mobiliser la valeur de votre patrimoine.")],
   communes="Lorient et son pays, Vannes et le golfe, Auray, Carnac et Quiberon, Pontivy et le centre Bretagne, Ploërmel, Josselin, Questembert, La Roche-Bernard, Belle-Île-en-Mer.",
   faqs=[("Intervenez-vous dans tout le Morbihan ?","Oui, sur tout le département et au-delà. Le rendez-vous peut se faire à l'agence de Lorient, en visio ou par téléphone."),
         ("Quels sont vos honoraires ?","L'étude est gratuite. Nos honoraires ne sont dus qu'une fois votre financement obtenu, à la signature, et ils sont annoncés dès le départ. Aucun versement ne peut être exigé avant."),
-        ("Êtes-vous un courtier agréé ?","Oui. KAIRN (BMB Financement) est immatriculé à l'ORIAS sous le n° 14003265, vérifiable sur orias.fr, et couvert par une assurance de responsabilité civile professionnelle.")]),
+        ("Êtes-vous un courtier agréé ?","Oui. KAIRN (BMB Financement) est immatriculé à l'ORIAS sous le n° 14003265, vérifiable sur orias.fr, et couvert par une assurance de responsabilité civile professionnelle."),
+        ("Comment choisir un courtier dans le Morbihan ?","Vérifiez quatre points : l'immatriculation à l'ORIAS, des honoraires dus uniquement après l'obtention du prêt, le nombre de banques réellement sollicitées et des avis clients vérifiables. KAIRN est inscrit à l'ORIAS sous le n° 14003265, travaille avec plus de 20 banques et est noté 5,0 sur 204 avis Google."),
+        ("Quels financements proposez-vous dans le Morbihan ?","Le <a href='credit-immobilier.html'>prêt immobilier</a>, le <a href='pret-professionnel.html'>prêt professionnel</a>, le <a href='rachat-de-credits.html'>regroupement de crédits</a>, le <a href='pret-hypothecaire.html'>prêt hypothécaire</a>, le <a href='pret-viager-hypothecaire.html'>prêt viager hypothécaire</a> pour les seniors et l'<a href='assurance-emprunteur.html'>assurance de prêt</a>."),
+        ("Accompagnez-vous les dossiers complexes ?","Oui, c'est une de nos spécialités : indépendants et chefs d'entreprise, revenus irréguliers, prêt hypothécaire, rachat de soulte, projets refusés par une première banque. Nous construisons un dossier argumenté et le présentons aux établissements qui financent ce type de profil.")]),
 
  dict(f="courtier-bretagne.html", nom="la Bretagne", court="Bretagne",
   seo=("Courtier en financement en Bretagne · KAIRN",
@@ -259,4 +266,4 @@ for z in ZONES:
 </div></section>
 <section class="section"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions</h2></div>{faq(z["faqs"])}</div></section>
 {cta_band(f"Un projet à {z['nom']} ?")}'''
-    page(z["f"], z["seo"][0], z["seo"][1], body, local=z)
+    page(z["f"], z["seo"][0], z["seo"][1], body, local=z, extra_head=faq_schema(z["faqs"]))

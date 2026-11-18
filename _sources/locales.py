@@ -104,7 +104,7 @@ ZONES = [
   projets=[("Achat avec travaux","Rénovation, extension, mise aux normes."),("Prêt relais","Acheter avant d'avoir vendu votre logement."),("Primo-accession","Acheter plutôt que louer."),("Assurance de prêt","Changer de contrat pour payer moins.")],
   communes="Hennebont, Inzinzac-Lochrist, Languidic, Kervignac, Brandérion, Caudan, Lanester, Plouay.",
   faqs=[("Peut-on financer les travaux dans le même prêt ?","Oui, sur la base de devis d'artisans. Les travaux de rénovation énergétique peuvent aussi ouvrir droit à des aides et à des prêts spécifiques."),
-        ("Comment fonctionne un prêt relais ?","La banque avance une partie de la valeur de votre logement actuel le temps de le vendre. Nous vérifions que le montage reste supportable si la vente prend plus de temps que prévu."),
+        ("Comment fonctionne un prêt relais ?","La banque avance une partie de la valeur de votre logement actuel le temps de le vendre. Nous vérifions que le montage reste supportable si la vente prend plus de temps que prévu. Notre guide <a href='guide-vendre-racheter-pret-relais.html'>Vendre pour racheter</a> détaille chaque étape."),
         ("Combien de temps pour obtenir une offre ?","Un accord de principe arrive en général en quelques jours, une offre de prêt sous 2 à 4 semaines. Nous suivons le dossier jusqu'à la signature chez le notaire.")]),
 
  dict(f="courtier-ploemeur.html", nom="Ploemeur", court="Ploemeur",

@@ -74,7 +74,7 @@ page("index.html","KAIRN · Courtier en financement à Lorient","KAIRN, courtier
 # ---------- MÉTIERS ----------
 # Guides liés à chaque page métier (maillage interne)
 GUIDES_METIER = {
- "credit-immobilier.html":[("guide-premier-achat.html","Premier achat immobilier : les étapes du financement"),("guide-capacite-emprunt-35.html","Capacité d'emprunt : comment la banque fait le calcul"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
+ "credit-immobilier.html":[("guide-vendre-racheter-pret-relais.html","Vendre pour racheter : financer votre prochain achat sereinement"),("guide-premier-achat.html","Premier achat immobilier : les étapes du financement"),("guide-capacite-emprunt-35.html","Capacité d'emprunt : comment la banque fait le calcul"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
  "pret-professionnel.html":[("guide-pret-professionnel.html","Prêt professionnel : comment convaincre sa banque")],
  "rachat-de-credits.html":[("guide-regroupement-credits.html","Regroupement de crédits : quand est-ce une bonne idée ?"),("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-rachat-pret-immobilier.html","Rachat de prêt immobilier : comment savoir si ça vaut le coup")],
  "pret-hypothecaire.html":[("guide-pret-hypothecaire.html","Prêt hypothécaire : emprunter grâce à votre patrimoine"),("guide-pret-viager-hypothecaire.html","Prêt viager hypothécaire : emprunter sans mensualité grâce à son logement"),("guide-garantie-pret-hypotheque-caution.html","Hypothèque ou caution : quelle garantie pour votre prêt ?")],
@@ -254,9 +254,12 @@ part = page_hero("Nos partenaires","Nos partenaires","Un réseau solide <span cl
 <div><div class="section-head"><span class="eyebrow">Notaires</span><h2>Les notaires, à chaque étape</h2><p class="lead">De la promesse de vente à la signature de l'acte, nous coordonnons votre financement avec votre notaire pour que les fonds soient prêts le jour J.</p></div>{logos([("Notaires de France","notaires"),("Notaire &amp; Breton","notaire-breton")])}</div>
 <div><div class="section-head"><span class="eyebrow">Assurance de prêt</span><h2>Assurance emprunteur</h2><p class="lead">Pour trouver la meilleure couverture au meilleur prix, nous passons par des intermédiaires spécialisés de l'assurance de prêt.</p></div>{logos([("Assurea","assurea"),("Digital Insure","digital-insure")])}</div>
 </div></section>
+<section class="section"><div class="wrap">
+<div><div class="section-head"><span class="eyebrow">Vente immobilière</span><h2>Choizimmo, pour choisir son agence</h2><p class="lead">Choizimmo est un comparateur gratuit et sans engagement qui aide les vendeurs à choisir l'agence immobilière la plus adaptée à leur bien, à partir des ventes enregistrées par l'État (DVF). Le vendeur estime son bien en ligne, puis un conseiller le visite, affine le prix et lui présente les agences qui vendent le mieux les biens comme le sien.</p><p style="margin-top:14px"><a class="btn btn-outline" href="https://choizimmo.fr">Découvrir Choizimmo {I["arrow"]}</a></p></div></div>
+</div></section>
 <section class="section" style="padding-block:28px 0"><div class="wrap"><p class="fine">Liste non exhaustive. Les marques et logos cités appartiennent à leurs propriétaires respectifs. KAIRN est un courtier indépendant : aucun de ces établissements ne détient de participation dans le cabinet.</p></div></section>
 {cta_band()}'''
-page("partenaires.html","Nos partenaires · Banques, notaires et assureurs · KAIRN","Les banques, notaires et spécialistes de l'assurance de prêt avec lesquels KAIRN, courtier à Lorient, travaille pour financer votre projet.",part)
+page("partenaires.html","Nos partenaires · Banques, notaires et assureurs · KAIRN","Les banques, notaires, spécialistes de l'assurance de prêt et partenaires immobiliers avec lesquels KAIRN, courtier à Lorient, travaille pour financer votre projet.",part)
 
 # ---------- CONTACT ----------
 opts = [("immo","Crédit immobilier"),("pro","Prêt professionnel"),("rachat","Regroupement de crédits"),("hypo","Prêt hypothécaire"),("assurance","Assurance de prêt"),("seniors","Viager hypothécaire ou réméré"),("autre","Autre demande")]

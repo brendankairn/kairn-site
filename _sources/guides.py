@@ -50,6 +50,63 @@ dict(
         ("Combien de temps faut-il ?","La banque a 10 jours ouvrés pour répondre à compter de la réception de la demande complète. En pratique, comptez quelques semaines entre la comparaison et l'avenant.")]
 ),
 dict(
+  f="guide-vendre-racheter-pret-relais.html",
+  court="Vendre pour racheter",
+  tag="Prêt immobilier",
+  date="2026-11-18",
+  seo=("Vendre pour racheter en Bretagne Sud : prêt relais | KAIRN",
+       "Prêt relais, vendre avant ou après, prix de vente réaliste à Lorient et en Bretagne Sud : comment financer votre prochain achat sereinement."),
+  h1="Vendre pour racheter en Bretagne Sud : comment financer votre prochain achat sereinement",
+  chapo="Vous êtes propriétaire à Lorient, Vannes, Auray ou Quimperlé et votre prochain logement dépend de la vente du premier. Entre le prêt relais, le calendrier et le prix de vente, voici comment organiser le financement sans vous mettre sous pression.",
+  minutes=7,
+  points=[("60 à 70 %","La part de la valeur estimée de votre bien que la banque finance souvent en prêt relais."),
+          ("12 mois","La durée habituelle d'un prêt relais, prolongeable une fois dans la plupart des banques."),
+          ("Prix et délai","Les deux paramètres qui décident du coût réel de l'opération.")],
+  body='''
+<h2 id="pret-relais">Le prêt relais : acheter avant d'avoir vendu</h2>
+<p>Le prêt relais permet de financer votre nouvel achat sans attendre l'argent de la vente. La banque vous avance une partie de la valeur de votre logement actuel. Quand la vente est signée, le prix sert à rembourser ce prêt en une seule fois.</p>
+<p>Sa durée est en général de <strong>12 mois</strong>, prolongeable une fois dans la plupart des banques. Pendant cette période, vous ne remboursez pas le capital. Selon la formule, vous payez seulement les intérêts chaque mois, ou rien du tout : les intérêts s'ajoutent alors à la somme à rembourser au moment de la vente.</p>
+<p>Le prêt relais est souvent associé à un prêt classique pour compléter le financement du nouveau logement. Si un crédit court encore sur votre bien actuel, son capital restant dû est déduit de la somme avancée, ou repris dans le nouveau financement.</p>
+
+<h2 id="banque">Ce que la banque regarde</h2>
+<ul>
+<li><b>La valeur de votre bien.</b> Elle s'appuie sur une ou plusieurs estimations écrites d'agences, parfois sur un compromis de vente déjà signé.</li>
+<li><b>Votre capacité à supporter les deux.</b> Les intérêts du prêt relais et les mensualités du nouveau prêt doivent rester compatibles avec vos revenus, y compris si la vente prend plus de temps que prévu.</li>
+<li><b>Le crédit en cours.</b> Le capital restant dû sur votre logement actuel réduit la somme disponible.</li>
+<li><b>Le marché local.</b> Un bien qui se vend vite dans votre secteur rassure davantage la banque qu'un bien plus difficile à placer.</li>
+</ul>
+
+<h2 id="avant-apres">Vendre avant ou acheter avant ?</h2>
+<p><strong>Vendre d'abord</strong> donne un budget connu au centime et évite tout prêt relais. En contrepartie, il faut parfois se loger le temps de trouver, ou négocier avec l'acquéreur une date de signature compatible avec votre propre achat.</p>
+<p><strong>Acheter d'abord</strong> permet de ne pas laisser passer le bien que vous voulez, ce qui compte quand l'offre est rare, comme souvent sur le littoral. Le prix à payer est une période où vous êtes propriétaire de deux biens, avec le coût et l'incertitude du prêt relais.</p>
+<p>Entre les deux, beaucoup de nos clients mettent leur bien en vente dès la recherche lancée, pour signer les deux actes à quelques semaines d'écart. Dans ce cas, le prêt relais sert de filet de sécurité plutôt que de solution principale.</p>
+
+<h2 id="prix">Estimer son prix de vente de façon réaliste</h2>
+<p>Comme la banque finance souvent <strong>60 à 70 % de la valeur estimée</strong> de votre bien, une estimation trop optimiste a un double effet : elle fausse votre budget d'achat et elle peut allonger la vente, donc la durée du prêt relais.</p>
+<p>Quelques repères issus d'une étude de Choizimmo sur 7 830 ventes enregistrées entre 2023 et 2025 dans Lorient Agglomération (données DVF de l'État) :</p>
+<ul>
+<li>Prix médian d'une maison dans l'agglomération de Lorient en 2025 : <strong>264 500 €</strong>, soit 2 710 €/m², en baisse d'environ 3 %.</li>
+<li>À Lorient même : <strong>288 250 €</strong> pour une maison (3 030 €/m²) et <strong>150 000 €</strong> pour un appartement (2 590 €/m²).</li>
+<li>Les communes du littoral se vendent environ <strong>35 % plus cher</strong> que celles de l'intérieur.</li>
+</ul>
+<p>Sur une maison estimée au prix médian de l'agglomération, 264 500 €, un prêt relais à 60 ou 70 % représente entre 158 700 € et 185 150 €, avant déduction d'un éventuel crédit en cours. Pour situer votre propre bien, vous pouvez consulter les <a href="https://choizimmo.fr/prix-immobilier-lorient-2027.html">prix immobiliers à Lorient</a> par type de bien, puis les comparer avec les estimations des agences.</p>
+
+<h2 id="agence">Le choix de l'agence pèse sur le prix et sur le délai</h2>
+<p>Dans une opération d'achat-revente, l'agence qui vend votre bien a une influence directe sur votre financement. Un prix bien positionné dès le départ et un acquéreur solide raccourcissent la durée du prêt relais. Une vente qui traîne, à l'inverse, prolonge les intérêts et oblige parfois à baisser le prix plus tard.</p>
+<p>Plutôt que de choisir l'agence au hasard ou sur la seule estimation la plus haute, il est utile de regarder ses résultats sur des biens comparables au vôtre : prix obtenus et délais de vente. C'est ce que permet de <a href="https://choizimmo.fr">comparer les agences de son secteur avec Choizimmo</a>, un service gratuit et sans engagement pour le vendeur. Vous estimez votre bien en ligne, puis un conseiller le visite, affine le prix et vous présente les agences qui vendent le mieux les biens comme le vôtre, à partir des ventes enregistrées par l'État.</p>
+
+<h2 id="kairn">Comment nous vous accompagnons</h2>
+<p>Avant même la mise en vente, nous calculons ce que vous pouvez acheter dans les deux scénarios : vendre d'abord ou acheter d'abord. Nous vérifions que le montage reste supportable si la vente prend plus de temps que prévu, puis nous présentons le dossier à plusieurs banques pour le prêt relais comme pour le prêt principal. Pour commencer, <a href="contact.html">demandez votre étude gratuite</a> ou <a href="simulateurs.html">faites une première simulation</a>.</p>
+''',
+  sim="sim_capacite", sim_titre="Calculez votre budget pour le prochain achat",
+  lien=("contact.html","Demander une étude gratuite"),
+  faqs=[("Combien de temps dure un prêt relais ?","En général 12 mois, avec une prolongation possible de 12 mois dans la plupart des banques. Si le bien n'est pas vendu au terme, il faut rembourser autrement, d'où l'intérêt d'un prix de vente réaliste."),
+        ("Combien la banque m'avance-t-elle sur mon bien actuel ?","Souvent 60 à 70 % de sa valeur estimée, moins le capital restant dû si un crédit court encore dessus. Le pourcentage dépend de la banque, du bien et de la qualité des estimations."),
+        ("Dois-je rembourser le prêt relais chaque mois ?","Pas le capital. Selon la formule, vous payez seulement les intérêts chaque mois, ou rien jusqu'à la vente. Dans ce cas, les intérêts s'ajoutent à la somme remboursée à la signature de la vente."),
+        ("Que se passe-t-il si mon bien se vend moins cher que prévu ?","Le prix de vente rembourse d'abord le prêt relais. S'il manque une somme, il faut l'apporter ou la financer autrement. C'est pourquoi nous calculons le montage avec une marge de sécurité."),
+        ("Faut-il un compromis de vente signé pour obtenir un prêt relais ?","Non, une ou plusieurs estimations écrites d'agences suffisent en général. Un compromis signé permet cependant d'obtenir un montant plus élevé et rassure la banque.")]
+),
+dict(
   f="guide-capacite-emprunt-35.html",
   court="Capacité d'emprunt",
   tag="Prêt immobilier",
@@ -404,7 +461,7 @@ dict(
 ),
 ]
 
-_ORDRE = ["guide-pret-hypothecaire.html","guide-pret-viager-hypothecaire.html","guide-capacite-emprunt-35.html","guide-premier-achat.html","guide-regroupement-credits.html","guide-pret-professionnel.html","guide-assurance-pret-loi-lemoine.html","guide-garantie-pret-hypotheque-caution.html","guide-rachat-pret-immobilier.html"]
+_ORDRE = ["guide-pret-hypothecaire.html","guide-pret-viager-hypothecaire.html","guide-vendre-racheter-pret-relais.html","guide-capacite-emprunt-35.html","guide-premier-achat.html","guide-regroupement-credits.html","guide-pret-professionnel.html","guide-assurance-pret-loi-lemoine.html","guide-garantie-pret-hypotheque-caution.html","guide-rachat-pret-immobilier.html"]
 GUIDES.sort(key=lambda g: _ORDRE.index(g["f"]) if g["f"] in _ORDRE else len(_ORDRE))
 
 GUIDES_HUB = "guides.html"
@@ -447,7 +504,7 @@ for g in GUIDES:
 <section class="section white"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions</h2></div>{faq(g["faqs"])}</div></section>
 <section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow">À lire aussi</span><h2>Nos autres guides</h2></div><div class="cards">{guide_cards(g["f"])}</div></div></section>
 {cta_band()}'''
-    page(g["f"], g["seo"][0], g["seo"][1], body, active=GUIDES_HUB, extra_head=guide_schema(g))
+    page(g["f"], g["seo"][0], g["seo"][1], body, active=GUIDES_HUB, extra_head=guide_schema(g)+faq_schema(g["faqs"]))
 
 _hub = f'''
 <section class="dark page-hero">{HEXWM}<div class="wrap"><p class="crumbs"><a href="index.html">Accueil</a> / Guides</p>

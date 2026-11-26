@@ -253,7 +253,7 @@ def page(fname, title, desc, body, active=None, local=None, extra_head=""):
 <meta property="og:url" content="https://kairn-finance.com/{'' if fname=='index.html' else fname}"><meta property="og:site_name" content="KAIRN"><meta property="og:image" content="https://kairn-finance.com/og-kairn.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="KAIRN, experts en financements"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="48x48"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">{PLAUSIBLE if MODE=="site" else ""}{schema() if fname=="index.html" else ""}{local_schema(fname, local) if local else ""}{extra_head}'''
     content = f'{header(active or fname)}<main>{body}</main>{footer()}{'<script>window.KAIRN_FORM_ENDPOINT="envoi.php";</script>' if MODE=='site' else ''}<script src="main.js"></script>'
     if MODE=="artifact" and fname=="index.html":
@@ -304,4 +304,4 @@ if MODE=="site":
     _llms+="\n## Guides\n\n- [Tous nos guides](https://kairn-finance.com/guides.html)\n"+"".join(f"- [{g['court']}](https://kairn-finance.com/{g['f']})\n" for g in GUIDES)
     _llms+="\n## Outils\n\n- [Simulateurs de crédit](https://kairn-finance.com/simulateurs.html) : capacité d'emprunt, regroupement de crédits, prêt hypothécaire, prêt professionnel, assurance de prêt.\n"
     open(os.path.join(OUT,"llms.txt"),"w").write(_llms)
-shutil.copy("favicon.svg", OUT)
+for _f in ["favicon.svg","favicon.ico","favicon-48.png","favicon-96.png","favicon-192.png","favicon-512.png","apple-touch-icon.png"]: shutil.copy(_f, OUT)

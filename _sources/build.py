@@ -269,6 +269,7 @@ exec(open(os.path.join(os.path.dirname(__file__) or ".","pages.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","locales.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","guides.py")).read())
 exec(open(os.path.join(os.path.dirname(__file__) or ".","hypo_villes.py")).read())
+exec(open(os.path.join(os.path.dirname(__file__) or ".","equipe.py")).read())
 for f in ["style.css","main.js"] + (["envoi.php"] if MODE=="site" else []):
     shutil.copy(f, OUT)
 
@@ -292,13 +293,14 @@ if MODE=="site":
         if p in _old and _old[p]!=today: return _old[p]
         d=_sp.run(["git","-C",OUT,"log","-1","--format=%cs","--",p],capture_output=True,text=True).stdout.strip()
         return d or today
-    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","pret-viager-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","partenaires.html","bmb-financement.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+[v["f"] for v in HYPO_VILLES]+["guides.html"]+[g["f"] for g in GUIDES]
+    pages=["index.html","credit-immobilier.html","pret-professionnel.html","rachat-de-credits.html","pret-hypothecaire.html","pret-viager-hypothecaire.html","assurance-emprunteur.html","simulateurs.html","cabinet.html","partenaires.html","bmb-financement.html","contact.html","mentions-legales.html"]+[z["f"] for z in ZONES]+[v["f"] for v in HYPO_VILLES]+[conseiller_url(c["slug"]) for c in CONSEILLERS]+["guides.html"]+[g["f"] for g in GUIDES]
     urls="".join(f"  <url><loc>https://kairn-finance.com/{'' if p=='index.html' else p}</loc><lastmod>{lastmod(p)}</lastmod></url>\n" for p in pages)
     open(os.path.join(OUT,"sitemap.xml"),"w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
     open(os.path.join(OUT,"robots.txt"),"w").write("User-agent: *\nDisallow: /_sources/\nDisallow: /envoi.php\n\nSitemap: https://kairn-finance.com/sitemap.xml\n")
     _known={"courtier-lorient.html","courtier-morbihan.html","courtier-bretagne.html"}
     _llms=LLMS_TXT+"".join(f"- [Courtier en financement · {z['court']}](https://kairn-finance.com/{z['f']})\n" for z in ZONES if z["f"] not in _known)
     _llms+="\n## Prêt hypothécaire partout en France\n\n"+"".join(f"- [Prêt hypothécaire à {v['ville']}](https://kairn-finance.com/{v['f']})\n" for v in HYPO_VILLES)
+    _llms+="\n## L'équipe\n\n"+"".join(f"- [{c['nom']}, {c['titre'].lower()}](https://kairn-finance.com/{conseiller_url(c['slug'])})\n" for c in CONSEILLERS)
     _llms+="\n## Guides\n\n- [Tous nos guides](https://kairn-finance.com/guides.html)\n"+"".join(f"- [{g['court']}](https://kairn-finance.com/{g['f']})\n" for g in GUIDES)
     _llms+="\n## Outils\n\n- [Simulateurs de crédit](https://kairn-finance.com/simulateurs.html) : capacité d'emprunt, regroupement de crédits, prêt hypothécaire, prêt professionnel, assurance de prêt.\n"
     open(os.path.join(OUT,"llms.txt"),"w").write(_llms)

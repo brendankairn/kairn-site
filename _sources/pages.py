@@ -253,7 +253,7 @@ page("simulateurs.html","Simulateurs de crédit · KAIRN","Simulateurs gratuits 
 team = [("Brendan Le Roux","Dirigeant, expert en prêt hypothécaire","brendan-le-roux"),("Aurélie Thouvard","Coordinatrice de financement","aurelie-thouvard"),("Valérie Le Barber","Experte en prêt immobilier et professionnel","valerie-le-barber"),("Laëtitia Leven","Experte en prêt immobilier et professionnel","laetitia-leven"),("Solen Rojouant","Experte en prêt immobilier","solen-rojouant"),("Anaïs Dietrich","Experte en prêt immobilier","anais-dietrich"),("Maxime Hellec-Duval","Expert en prêt immobilier","maxime-hellec-duval"),("Laëtitia Bernard","Experte en regroupement de crédits et prêt hypothécaire","laetitia-bernard"),("Tifenn Le Bouëdec","Experte en regroupement de crédits","tifenn-le-bouedec")]
 def ini(n):
     p=n.replace("-"," ").split(); return (p[0][0]+p[-1][0]).upper()
-tm = "".join(f'<div class="member"><img class="avatar" src="equipe/{ph}.jpg" alt="{n}" width="72" height="72" loading="lazy"><div><b>{n}</b><span>{r}</span></div></div>' for n,r,ph in team)
+tm = "".join(f'<a class="member" href="conseiller-{ph}.html"><img class="avatar" src="equipe/{ph}.jpg" alt="{n}" width="72" height="72" loading="lazy"><div><b>{n}</b><span>{r}</span></div></a>' for n,r,ph in team)
 cab = page_hero("Le cabinet","Le cabinet","La confiance, <span class='u'>première pierre</span> de tout financement","Un cairn est un empilement de pierres qui guide le marcheur. C'est ce que nous voulons être pour vous : un repère fiable, posé pierre après pierre.") + f'''
 <section class="section"><div class="wrap split">
 <div class="prose"><span class="eyebrow">Notre histoire</span><h2 style="color:var(--text)">Un cabinet indépendant, exigeant et sur mesure</h2>
@@ -289,7 +289,7 @@ def team_schema():
     d={"@context":"https://schema.org","@graph":[
       {"@type":"AboutPage","@id":"https://kairn-finance.com/cabinet.html","name":"Le cabinet KAIRN","about":org,"mainEntity":org},
       {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://kairn-finance.com/"},{"@type":"ListItem","position":2,"name":"Le cabinet","item":"https://kairn-finance.com/cabinet.html"}]}]+[
-      {"@type":"Person","@id":f"https://kairn-finance.com/cabinet.html#{ph}","name":n,"jobTitle":r,"image":f"https://kairn-finance.com/equipe/{ph}.jpg","worksFor":org,"workLocation":{"@type":"Place","name":"Lorient"}} for n,r,ph in team]}
+      {"@type":"Person","@id":f"https://kairn-finance.com/cabinet.html#{ph}","name":n,"jobTitle":r,"url":f"https://kairn-finance.com/conseiller-{ph}.html","image":f"https://kairn-finance.com/equipe/portrait/{ph}.jpg","worksFor":org,"workLocation":{"@type":"Place","name":"Lorient"}} for n,r,ph in team]}
     return '<script type="application/ld+json">'+_j.dumps(d,ensure_ascii=False)+'</script>'
 page("cabinet.html","Le cabinet KAIRN · Courtiers à Lorient","KAIRN, cabinet de courtage en financement fondé par Brendan Le Roux à Lorient : 9 experts, 15 ans d'expérience, une méthode en 4 étapes. Recrutement ouvert.",cab, extra_head=team_schema())
 

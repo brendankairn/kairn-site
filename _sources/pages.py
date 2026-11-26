@@ -335,6 +335,7 @@ contact = page_hero("Contact","Contact","Parlons de <span class='u'>votre projet
 <div class="panel">{ticks([("Par téléphone", PHONE + ""),("Par e-mail", MAIL),("À l'agence", ADDR),("Horaires","Lundi au jeudi 9h–12h / 13h30–18h, vendredi jusqu'à 17h · samedi sur rendez-vous")])}</div>
 <div class="panel" style="background:var(--ink);color:#fff;border-color:var(--ink)"><span class="eyebrow" style="color:#a9c1cf">Nos engagements</span><ul class="ticks" style="margin-top:14px">
 <li>{I["clock"]}<div><b style="color:#fff">Réponse sous 24 h ouvrées</b></div></li><li>{I["gift"]}<div><b style="color:#fff">Étude de financement gratuite</b></div></li><li>{I["shield"]}<div><b style="color:#fff">Calcul gratuit de votre économie d'assurance</b></div></li><li>{I["euro"]}<div><b style="color:#fff">Honoraires uniquement en cas de succès</b></div></li></ul></div>
+<div class="panel"><b>Attention aux faux sites.</b> Notre seul site est kairn-finance.com et nos e-mails se terminent par @kairn-finance.fr. Nous ne demandons jamais d'argent avant le déblocage de votre prêt. <a href="bmb-financement.html#usurpation">En savoir plus</a></div>
 <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=8+mail+Jeanne+Villepreux-Power+56100+Lorient" rel="noopener">Voir l'agence sur la carte {I["arrow"]}</a>
 </div></div></section>'''
 page("contact.html","Contact · KAIRN, courtier à Lorient","Contactez KAIRN, courtier en financement à Lorient : étude gratuite, rappel sous 24 h ouvrées. 06 44 31 10 93, 8 mail Jeanne Villepreux-Power.",contact)
@@ -358,3 +359,39 @@ ml = page_hero("Mentions légales","Informations légales","Mentions légales","
 <section><h2>Simulateurs</h2><p>Les résultats des simulateurs sont indicatifs et ne constituent ni une offre de prêt ni un engagement. Seule l'étude de votre dossier par un établissement prêteur permet de déterminer les conditions définitives.</p></section>
 </div></section>'''
 page("mentions-legales.html","Mentions légales · KAIRN","Mentions légales, statut ORIAS, médiation et politique de données personnelles de KAIRN (BMB Financement).",ml)
+
+# ---------- BMB FINANCEMENT (identité officielle, anti-usurpation) ----------
+BMB_FAQS = [
+ ("Quel est le lien entre BMB Financement et KAIRN ?","KAIRN est le nom commercial de BMB Financement. C'est la même société : BMB Financement, RCS Lorient 800 090 607, immatriculée à l'ORIAS sous le n° 14003265, dirigée par Brendan Le Roux."),
+ ("Quel est le site officiel de BMB Financement ?","Le seul site officiel de BMB Financement est kairn-finance.com. Nos adresses e-mail se terminent toutes par @kairn-finance.fr et notre numéro est le 06 44 31 10 93. Tout autre site qui utilise notre nom n'est pas le nôtre."),
+ ("BMB Financement est-il un courtier agréé ?","Oui. BMB Financement est immatriculée à l'ORIAS sous le n° 14003265 en qualité de courtier en opérations de banque et en services de paiement (COBSP), de mandataire d'intermédiaire en opérations de banque (MIOBSP) et de mandataire d'intermédiaire d'assurance (MIA). Le cabinet est adhérent de l'ANACOFI Courtage."),
+ ("Un courtier peut-il me demander de l'argent avant mon prêt ?","Non. La loi interdit à un intermédiaire en crédit de percevoir la moindre somme avant le versement effectif des fonds prêtés. Si l'on vous demande des frais, une caution ou un dépôt avant le déblocage de votre prêt, c'est une arnaque."),
+ ("Comment vérifier que je parle bien à KAIRN ?","Appelez-nous au 06 44 31 10 93, le numéro affiché sur ce site, ou passez à l'agence au 8 mail Jeanne Villepreux-Power à Lorient. Vous pouvez aussi vérifier notre immatriculation n° 14003265 sur orias.fr."),
+]
+bmb_body = page_hero("BMB Financement","Site officiel","BMB Financement, <span class='u'>c'est KAIRN</span>","BMB Financement exerce sous le nom commercial KAIRN : courtier en crédit à Lorient, immatriculé à l'ORIAS sous le n° 14003265. Voici nos seules coordonnées officielles.") + f'''
+<section class="section"><div class="wrap split">
+<div class="section-head"><span class="eyebrow">Identité</span><h2>Qui est BMB Financement ?</h2><p class="lead">Une seule société, un seul nom commercial, un seul site.</p></div>
+<div class="panel">{ticks([
+ ("Raison sociale","BMB Financement, RCS Lorient 800 090 607"),
+ ("Nom commercial","KAIRN"),
+ ("Statut","Immatriculée à l'ORIAS sous le n° 14003265 : COBSP, MIOBSP, MIA. Adhérent de l'ANACOFI Courtage."),
+ ("Dirigeant","Brendan Le Roux"),
+ ("Agence", ADDR),
+ ("Site officiel","kairn-finance.com, et aucun autre"),
+ ("Téléphone", PHONE),
+ ("E-mail","Toutes nos adresses se terminent par @kairn-finance.fr")])}</div>
+</div></section>
+<section class="section white" id="usurpation"><div class="wrap split">
+<div class="section-head"><span class="eyebrow">Sécurité</span><h2>Attention aux faux sites</h2><p class="lead">Des escrocs copient parfois le nom, le numéro ORIAS ou le logo de vrais courtiers pour obtenir de l'argent ou des documents personnels.</p></div>
+<div class="panel"><p><b>Nous ne vous demanderons jamais :</b></p>
+<ul class="ticks" style="margin-top:10px">
+<li>{I["shield"]}<div><b>De l'argent avant le déblocage de votre prêt</b><span>Frais de dossier, caution, assurance à payer d'avance : c'est interdit par la loi.</span></div></li>
+<li>{I["shield"]}<div><b>Un virement vers un compte de particulier ou à l'étranger</b><span>Ni paiement en cryptomonnaie, en coupon ou en carte prépayée.</span></div></li>
+<li>{I["shield"]}<div><b>Vos codes bancaires</b><span>Ni mot de passe, ni code reçu par SMS.</span></div></li></ul>
+<p style="margin-top:16px"><b>Un doute ?</b> Appelez-nous au <a class="num" href="tel:{TEL}">{PHONE}</a> avant tout envoi d'argent ou de documents. Si vous pensez avoir été victime d'un faux site, déposez plainte et signalez-le sur <a href="https://www.internet-signalement.gouv.fr" rel="noopener">internet-signalement.gouv.fr</a> et sur <a href="https://signal.conso.gouv.fr" rel="noopener">signal.conso.gouv.fr</a>.</p></div>
+</div></section>
+<section class="section"><div class="wrap split"><div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Vos questions sur BMB Financement</h2></div>{faq(BMB_FAQS)}</div></section>
+{cta_band()}'''
+page("bmb-financement.html","BMB Financement · Site officiel de KAIRN, courtier à Lorient",
+ "BMB Financement exerce sous le nom KAIRN, courtier en crédit à Lorient (ORIAS 14003265). Site officiel, coordonnées vérifiées et conseils contre les faux sites.",
+ bmb_body, active="cabinet.html", extra_head=faq_schema(BMB_FAQS))

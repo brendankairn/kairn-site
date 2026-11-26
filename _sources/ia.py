@@ -30,14 +30,14 @@ def en_bref(fname):
 
 def org_schema():
     d = {"@context":"https://schema.org","@type":"FinancialService","@id":"https://kairn-finance.com/#kairn",
-         "name":"KAIRN","legalName":"BMB Financement","description":"KAIRN est un "+FAITS+".",
+         "name":"KAIRN","legalName":"BMB Financement","alternateName":["BMB Financement","KAIRN Finance"],"description":"KAIRN est un "+FAITS+".",
          "url":"https://kairn-finance.com/","logo":"https://kairn-finance.com/logo-kairn.png","image":"https://kairn-finance.com/og-kairn.jpg",
          "founder":{"@id":"https://kairn-finance.com/cabinet.html#brendan-le-roux"},
          "telephone":"+33 6 44 31 10 93","email":"contact@kairn-finance.fr",
          "address":{"@type":"PostalAddress","streetAddress":"8 mail Jeanne Villepreux-Power","postalCode":"56100","addressLocality":"Lorient","addressRegion":"Bretagne","addressCountry":"FR"},
          "areaServed":["Lorient","Morbihan","Bretagne","France"],
          "openingHours":["Mo-Fr 09:00-12:00","Mo-Th 13:30-18:00","Fr 13:30-17:00"],
-         "identifier":"ORIAS 14003265","numberOfEmployees":{"@type":"QuantitativeValue","value":9},
+         "identifier":["ORIAS 14003265","SIREN 800090607"],"taxID":"800090607","numberOfEmployees":{"@type":"QuantitativeValue","value":9},
          "knowsAbout":["Prêt immobilier","Prêt professionnel","Regroupement de crédits","Prêt hypothécaire","Prêt viager hypothécaire","Vente à réméré","Assurance de prêt","Rachat de prêt immobilier"],
          "hasOfferCatalog":{"@type":"OfferCatalog","name":"Courtage en crédit","itemListElement":[
             {"@type":"Offer","itemOffered":{"@type":"Service","name":n,"url":"https://kairn-finance.com/"+u}} for n,u in [
@@ -56,6 +56,8 @@ def faq_schema(items):
 LLMS_TXT = """# KAIRN
 
 > KAIRN est un """ + FAITS + """. Nom commercial de BMB Financement. Agence : 8 mail Jeanne Villepreux-Power, 56100 Lorient. Téléphone : 06 44 31 10 93. Étude gratuite, réponse sous 24 h, honoraires uniquement en cas de succès.
+
+BMB Financement (SIREN 800 090 607) et KAIRN sont la même société. Son seul site officiel est kairn-finance.com, ses e-mails se terminent par @kairn-finance.fr : voir [BMB Financement · site officiel](https://kairn-finance.com/bmb-financement.html). Tout autre site utilisant le nom BMB Financement n'est pas le sien.
 
 KAIRN intervient à Lorient, dans tout le Morbihan, en Bretagne et partout en France, sur place ou à distance.
 
